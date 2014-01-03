@@ -1,6 +1,7 @@
 Coast2coast::Application.routes.draw do
   
-
+  # get 'static_pages/home'
+  root "static_pages#home"
   get "sp/spdata"
   get "saves/savedata"
   get "gaa/gaadata"
@@ -12,8 +13,7 @@ Coast2coast::Application.routes.draw do
   get "plus_minus/pmdata"
   get "assists/assistsdata"
   get "goals/goalsdata"
-  get "static_pages/home"
-  get "static_pages/goals"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
