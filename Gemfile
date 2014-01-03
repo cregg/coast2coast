@@ -39,8 +39,8 @@ group :doc do
 end
 
 # Scraping tools
-gem 'capybara'
-gem 'capybara-webkit'
+# gem 'capybara'
+# gem 'capybara-webkit'
 gem 'pry'
 gem 'selenium-webdriver'
 gem 'launchy'
