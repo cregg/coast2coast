@@ -4,7 +4,7 @@ gem 'rails', '4.0.0.rc1'
 
 # Use mysql as the database for Active Record
 gem 'mysql'
-
+gem 'postgreSQL'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'haml'
@@ -48,6 +48,7 @@ gem 'launchy'
 # Production gems
 group :production do
 	gem 'rails_12factor', '0.0.2'
+	gem 'pg'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
