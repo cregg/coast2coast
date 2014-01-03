@@ -1,0 +1,122 @@
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+     $('#wpw-chart').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+        		text: "Save % per Week"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "Save %"	
+        	},
+        	min: 0.75,
+            max: 1.0
+        },
+        legend: {
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'center',
+            verticalAlign: 'top',
+            y: 40
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= raw weekly_team_save_p("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= raw weekly_team_save_p("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= raw weekly_team_save_p("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= raw weekly_team_save_p("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= raw weekly_team_save_p("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= raw weekly_team_save_p("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= raw weekly_team_save_p("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= raw weekly_team_save_p("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= raw weekly_team_save_p("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= raw weekly_team_save_p("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+		$('#tw-chart').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+        		text: "Cumulative Save %"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "Save %",
+        	},
+        	min: 0.3,
+            max: 1.0
+        },
+        legend: {
+            layout: 'vertical',
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'left',
+            verticalAlign: 'top',
+            y: 60,
+            x: 50
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= raw cumulative_team_save_p("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= raw cumulative_team_save_p("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= raw cumulative_team_save_p("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= raw cumulative_team_save_p("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= raw cumulative_team_save_p("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= raw cumulative_team_save_p("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= raw cumulative_team_save_p("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= raw cumulative_team_save_p("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= raw cumulative_team_save_p("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= raw cumulative_team_save_p("Yippee Kai Yo Paille") %>
+        }]
+    });
+});
+</script>
+<div id="wpw-chart"></div>
+<div id="tw-chart"></div>
+<div id="pie-chart"></div>

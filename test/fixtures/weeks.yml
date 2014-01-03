@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  week_number: 1
+  team: MyString
+  goals: 1
+  assists: 1
+  plus_minus: 1
+  ppp: 1
+  hits: 1
+  blocks: 1
+  wins: 1
+  gaa: 
+  saves: 1
+  save_p: 
+
+two:
+  week_number: 1
+  team: MyString
+  goals: 1
+  assists: 1
+  plus_minus: 1
+  ppp: 1
+  hits: 1
+  blocks: 1
+  wins: 1
+  gaa: 
+  saves: 1
+  save_p: 

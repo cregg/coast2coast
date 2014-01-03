@@ -1,0 +1,137 @@
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+     $('#wpw-chart').highcharts({
+        chart: {
+                renderTo: 'wpw-chart',
+            type: 'line'
+        },
+        title: {
+                text: "PIMs per Week"   
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+            title: {
+                text: "PIMS"    
+            },
+            min: 0
+        },
+        legend: {
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'center',
+            verticalAlign: 'top',
+            y: 40
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= weekly_team_pims("At the Helm") %>
+            },{ 
+            name: "Big Douche-Hayne",
+            data: <%= weekly_team_pims("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= weekly_team_pims("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= weekly_team_pims("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= weekly_team_pims("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= weekly_team_pims("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= weekly_team_pims("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= weekly_team_pims("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= weekly_team_pims("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= weekly_team_pims("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+        $('#tw-chart').highcharts({
+        chart: {
+                renderTo: 'tw-chart',
+            type: 'line'
+        },
+        title: {
+                text: "Cumulative PIMS" 
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+            title: {
+                text: "PIMS",
+            },
+            min: 0
+        },
+        legend: {
+            layout: 'vertical',
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'left',
+            verticalAlign: 'top',
+            y: 60,
+            x: 50
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= cumulative_team_pims("At the Helm") %>
+            },{ 
+            name: "Big Douche-Hayne",
+            data: <%= cumulative_team_pims("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= cumulative_team_pims("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= cumulative_team_pims("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= cumulative_team_pims("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= cumulative_team_pims("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= cumulative_team_pims("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= cumulative_team_pims("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= cumulative_team_pims("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= cumulative_team_pims("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+    $('#pie-chart').highcharts({
+        chart:{
+            renderTo:'pie-chart',
+        },
+        title: {
+            text: "Percentage of PIMS"
+        },
+        series: [{
+                type: 'pie',
+                data: <%= raw pim_totals.to_json %>,
+                name: "PIMS"
+        }]
+
+    }); 
+    });
+</script>
+<div id="wpw-chart"></div>
+<div id="tw-chart"></div>
+<div id="pie-chart"></div>

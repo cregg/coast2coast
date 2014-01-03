@@ -1,0 +1,65 @@
+<%= form_for(@week) do |f| %>
+  <% if @week.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@week.errors.count, "error") %> prohibited this week from being saved:</h2>
+
+      <ul>
+      <% @week.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :week_number %><br>
+    <%= f.number_field :week_number %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :goals %><br>
+    <%= f.number_field :goals %>
+  </div>
+  <div class="field">
+    <%= f.label :assists %><br>
+    <%= f.number_field :assists %>
+  </div>
+  <div class="field">
+    <%= f.label :plus_minus %><br>
+    <%= f.number_field :plus_minus %>
+  </div>
+  <div class="field">
+    <%= f.label :ppp %><br>
+    <%= f.number_field :ppp %>
+  </div>
+  <div class="field">
+    <%= f.label :hits %><br>
+    <%= f.number_field :hits %>
+  </div>
+  <div class="field">
+    <%= f.label :blocks %><br>
+    <%= f.number_field :blocks %>
+  </div>
+  <div class="field">
+    <%= f.label :wins %><br>
+    <%= f.number_field :wins %>
+  </div>
+  <div class="field">
+    <%= f.label :gaa %><br>
+    <%= f.text_field :gaa %>
+  </div>
+  <div class="field">
+    <%= f.label :saves %><br>
+    <%= f.number_field :saves %>
+  </div>
+  <div class="field">
+    <%= f.label :save_p %><br>
+    <%= f.text_field :save_p %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

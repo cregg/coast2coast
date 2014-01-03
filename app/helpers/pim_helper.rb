@@ -1,0 +1,2 @@
+module PimHelper
+end

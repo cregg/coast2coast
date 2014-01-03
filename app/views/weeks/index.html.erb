@@ -1,0 +1,49 @@
+<h1>Listing weeks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Week number</th>
+      <th>Team</th>
+      <th>Goals</th>
+      <th>Assists</th>
+      <th>Plus minus</th>
+      <th>Ppp</th>
+      <th>Hits</th>
+      <th>Blocks</th>
+      <th>Wins</th>
+      <th>Gaa</th>
+      <th>Saves</th>
+      <th>Save p</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weeks.each do |week| %>
+      <tr>
+        <td><%= week.week_number %></td>
+        <td><%= week.team %></td>
+        <td><%= week.goals %></td>
+        <td><%= week.assists %></td>
+        <td><%= week.plus_minus %></td>
+        <td><%= week.ppp %></td>
+        <td><%= week.hits %></td>
+        <td><%= week.blocks %></td>
+        <td><%= week.wins %></td>
+        <td><%= week.gaa %></td>
+        <td><%= week.saves %></td>
+        <td><%= week.save_p %></td>
+        <td><%= link_to 'Show', week %></td>
+        <td><%= link_to 'Edit', edit_week_path(week) %></td>
+        <td><%= link_to 'Destroy', week, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Week', new_week_path %>

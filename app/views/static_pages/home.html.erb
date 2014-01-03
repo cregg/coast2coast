@@ -1,0 +1,138 @@
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+     $('#wpw-chart').highcharts({
+        chart: {
+        		renderTo: 'wpw-chart',
+            type: 'line'
+        },
+        title: {
+        		text: "Wins per Week"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "Wins"	
+        	},
+        	min: 0
+        },
+        legend: {
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'center',
+            verticalAlign: 'top',
+            y: 40
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= weekly_team_score("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= weekly_team_score("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= weekly_team_score("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= weekly_team_score("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= weekly_team_score("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= weekly_team_score("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= weekly_team_score("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= weekly_team_score("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= weekly_team_score("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= weekly_team_score("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+		$('#tw-chart').highcharts({
+        chart: {
+        		renderTo: 'tw-chart',
+            type: 'line'
+        },
+        title: {
+        		text: "Cumulative wins"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "Wins",
+        	},
+        	min: 0,
+        	max: 90
+        },
+        legend: {
+            layout: 'vertical',
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'left',
+            verticalAlign: 'top',
+            y: 60,
+            x: 50
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= cumulative_team_score("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= cumulative_team_score("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= cumulative_team_score("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= cumulative_team_score("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= cumulative_team_score("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= cumulative_team_score("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= cumulative_team_score("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= cumulative_team_score("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= cumulative_team_score("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= cumulative_team_score("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+    $('#pie-chart').highcharts({
+    	chart:{
+    		renderTo:'pie-chart',
+    	},
+    	title: {
+    		text: "Percentage of Wins"
+    	},
+    	series: [{
+    			type: 'pie',
+    			data: <%= raw team_totals.to_json %>,
+    			name: "Wins"
+    	}]
+
+    });	
+	});
+</script>
+<div id="wpw-chart"></div>
+<div id="tw-chart"></div>
+<div id="pie-chart"></div>

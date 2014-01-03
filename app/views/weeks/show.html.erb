@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Week number:</strong>
+  <%= @week.week_number %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @week.team %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @week.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @week.assists %>
+</p>
+
+<p>
+  <strong>Plus minus:</strong>
+  <%= @week.plus_minus %>
+</p>
+
+<p>
+  <strong>Ppp:</strong>
+  <%= @week.ppp %>
+</p>
+
+<p>
+  <strong>Hits:</strong>
+  <%= @week.hits %>
+</p>
+
+<p>
+  <strong>Blocks:</strong>
+  <%= @week.blocks %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= @week.wins %>
+</p>
+
+<p>
+  <strong>Gaa:</strong>
+  <%= @week.gaa %>
+</p>
+
+<p>
+  <strong>Saves:</strong>
+  <%= @week.saves %>
+</p>
+
+<p>
+  <strong>Save p:</strong>
+  <%= @week.save_p %>
+</p>
+
+<%= link_to 'Edit', edit_week_path(@week) %> |
+<%= link_to 'Back', weeks_path %>

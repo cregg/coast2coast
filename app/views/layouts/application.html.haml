@@ -1,0 +1,36 @@
+%head
+  %meta{charset: "utf-8"}/
+  %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+  %title= content_for?(:title) ? yield(:title) : "Fantasy Hockey"
+  = stylesheet_link_tag    "application"
+  = javascript_include_tag "vendor/modernizr", "jquery"
+  = csrf_meta_tags
+  = yield(:head)
+%body
+  .row
+  .large-12.columns
+    %ul.button-group.right
+      %li
+      .button=link_to 'Goals', '/goals/goalsdata', data: {push: true}
+      %li
+      .button=link_to 'Assists', '/assists/assistsdata', data: {push: true}
+      %li
+      .button=link_to 'Plus/Minus', '/plus_minus/pmdata', data: {push: true}
+      %li
+      .button=link_to 'PIMS', '/pim/pimdata', data: {push: true}
+      %li
+      .button=link_to 'Hits', '/hits/hitdata', data: {push: true}
+      %li
+      .button=link_to 'PPP', '/ppp/pppdata', data: {push: true}
+      %li
+      .button=link_to 'Blocks', '/blocks/blocksdata', data: {push: true}
+      %li
+      .button=link_to 'GAA', '/gaa/gaadata', data: {push: true}
+      %li
+      .button=link_to 'Wins', '/wins/winsdata', data: {push: true}
+      %li
+      .button=link_to 'Saves', '/saves/savedata', data: {push: true}
+      %li
+      .button=link_to 'Save %', '/sp/spdata', data: {push: true}
+  = yield
+  = javascript_include_tag "application"

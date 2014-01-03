@@ -1,0 +1,132 @@
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+     $('#wpw-chart').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+        		text: "Hits per Week"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "Hits"	
+        	},
+        	min: 0
+        },
+        legend: {
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'center',
+            verticalAlign: 'top',
+            y: 40
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= weekly_team_hits("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= weekly_team_hits("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= weekly_team_hits("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= weekly_team_hits("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= weekly_team_hits("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= weekly_team_hits("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= weekly_team_hits("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= weekly_team_hits("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= weekly_team_hits("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= weekly_team_hits("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+		$('#tw-chart').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+        		text: "Cumulative Hits"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "Hits",
+        	},
+        	min: 0
+        },
+        legend: {
+            layout: 'vertical',
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'left',
+            verticalAlign: 'top',
+            y: 60,
+            x: 50
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= cumulative_team_hits("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= cumulative_team_hits("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= cumulative_team_hits("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= cumulative_team_hits("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= cumulative_team_hits("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= cumulative_team_hits("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= cumulative_team_hits("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= cumulative_team_hits("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= cumulative_team_hits("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= cumulative_team_hits("Yippee Kai Yo Paille") %>
+        }]
+    });
+
+    $('#pie-chart').highcharts({
+    	title: {
+    		text: "Percentage of Hits"
+    	},
+    	series: [{
+    			type: 'pie',
+    			data: <%= raw hit_totals.to_json %>,
+    			name: "Hits"
+    	}]
+
+    });	
+	});
+</script>
+<div id="wpw-chart"></div>
+<div id="tw-chart"></div>
+<div id="pie-chart"></div>

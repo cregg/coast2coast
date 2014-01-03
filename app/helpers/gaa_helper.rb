@@ -1,0 +1,2 @@
+module GaaHelper
+end
