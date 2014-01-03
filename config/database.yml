@@ -24,8 +24,8 @@ test:
 
 production:
   adapter: mysql
-  database: coast2coast_production
-  username: root
-  password: Bergeron
+  database: heroku_47eaf2d74fb6561
+  username: b527565a7481a5
+  password: ca56121a
   pool: 5
   timeout: 5000
