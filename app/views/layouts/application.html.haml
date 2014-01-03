@@ -3,7 +3,7 @@
   %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
   %title= content_for?(:title) ? yield(:title) : "Fantasy Hockey"
   = stylesheet_link_tag    "application"
-  = javascript_include_tag "vendor/modernizr", "application"
+  = javascript_include_tag "vendor/modernizr", "jquery", "jquery_ujs"
   = csrf_meta_tags
   = yield(:head)
 %body
@@ -33,4 +33,4 @@
       %li
       .button=link_to 'Save %', '/sp/spdata', data: {push: true}
   = yield
-  = javascript_include_tag "foundation"
+  = javascript_include_tag "application"
