@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.rc1'
 
@@ -45,6 +44,11 @@ gem 'pry'
 gem 'selenium-webdriver'
 gem 'launchy'
 
+
+# Production gems
+group :production do
+	gem 'rails_12factor', '0.0.2'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
