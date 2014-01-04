@@ -1,123 +1,121 @@
-<head>
-    <script type="text/javascript" charset="utf-8">
-      $(function () {
-         $('#wpw-chart').highcharts({
-            chart: {
-            		renderTo: 'wpw-chart',
-                type: 'line'
-            },
-            title: {
-            		text: "GAA per Week"	
-            },
-            xAxis: {
-                categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
-            },
-            yAxis:{
-            	title: {
-            		text: "GAA"	
-            	},
-            	min: 0
-            },
-            legend: {
-                floating: true,
-                backgroundColor: '#FFFFFF',
-                align: 'center',
-                verticalAlign: 'top',
-                y: 40
-            },
-            series: [{
-                name: "At the Helm",
-                data: <%= weekly_team_gaa("At the Helm") %>
-              	},{ 
-                name: "Big Douche-Hayne",
-                data: <%= weekly_team_gaa("Big Douche-Hayne") %>
-                },{ 
-                name: "Chris's Team",
-                data: <%= weekly_team_gaa("Chris's Team") %>
-                },{ 
-                name: "Double Pennertration",
-                data: <%= weekly_team_gaa("Double Pennertration") %>
-                },{ 
-                name: "Hamhuis Sandwich's",
-                data: <%= weekly_team_gaa("Hamhuis Sandwich's") %>
-                },{ 
-                name: "Keith's Great Team",
-                data: <%= weekly_team_gaa("Keith's Great Team") %>
-                },{ 
-                name: "Lookin Sharp",
-                data: <%= weekly_team_gaa("Lookin Sharp") %>
-                },{ 
-                name: "Teemu's Salami",
-                data: <%= weekly_team_gaa("Teemu's Salami") %>
-                },{ 
-                name: "The Saadfather",
-                data: <%= weekly_team_gaa("The Saadfather") %>
-                },{
-                name: "Yippee Kai Yo Paille",
-                data: <%= weekly_team_gaa("Yippee Kai Yo Paille") %>
-            }]
-        });
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+     $('#wpw-chart').highcharts({
+        chart: {
+        		renderTo: 'wpw-chart',
+            type: 'line'
+        },
+        title: {
+        		text: "GAA per Week"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "GAA"	
+        	},
+        	min: 0
+        },
+        legend: {
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'center',
+            verticalAlign: 'top',
+            y: 40
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= weekly_team_gaa("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= weekly_team_gaa("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= weekly_team_gaa("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= weekly_team_gaa("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= weekly_team_gaa("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= weekly_team_gaa("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= weekly_team_gaa("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= weekly_team_gaa("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= weekly_team_gaa("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= weekly_team_gaa("Yippee Kai Yo Paille") %>
+        }]
+    });
 
-    		$('#tw-chart-full').highcharts({
-            chart: {
-                type: 'line'
-            },
-            title: {
-            		text: "Cumulative GAA"	
-            },
-            xAxis: {
-                categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
-            },
-            yAxis:{
-            	title: {
-            		text: "GAA",
-            	},
-            	min: 0
-            },
-            legend: {
-                layout: 'vertical',
-                floating: true,
-                backgroundColor: '#FFFFFF',
-                align: 'left',
-                verticalAlign: 'top',
-                y: 60,
-                x: 50
-            },
-            series: [{
-                name: "At the Helm",
-                data: <%= cumulative_team_gaa("At the Helm") %>
-              	},{ 
-                name: "Big Douche-Hayne",
-                data: <%= cumulative_team_gaa("Big Douche-Hayne") %>
-                },{ 
-                name: "Chris's Team",
-                data: <%= cumulative_team_gaa("Chris's Team") %>
-                },{ 
-                name: "Double Pennertration",
-                data: <%= cumulative_team_gaa("Double Pennertration") %>
-                },{ 
-                name: "Hamhuis Sandwich's",
-                data: <%= cumulative_team_gaa("Hamhuis Sandwich's") %>
-                },{ 
-                name: "Keith's Great Team",
-                data: <%= cumulative_team_gaa("Keith's Great Team") %>
-                },{ 
-                name: "Lookin Sharp",
-                data: <%= cumulative_team_gaa("Lookin Sharp") %>
-                },{ 
-                name: "Teemu's Salami",
-                data: <%= cumulative_team_gaa("Teemu's Salami") %>
-                },{ 
-                name: "The Saadfather",
-                data: <%= cumulative_team_gaa("The Saadfather") %>
-                },{
-                name: "Yippee Kai Yo Paille",
-                data: <%= cumulative_team_gaa("Yippee Kai Yo Paille") %>
-            }]
-        });
-    	});
-    </script>
-</head>
+		$('#tw-chart-full').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+        		text: "Cumulative GAA"	
+        },
+        xAxis: {
+            categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
+        },
+        yAxis:{
+        	title: {
+        		text: "GAA",
+        	},
+        	min: 0
+        },
+        legend: {
+            layout: 'vertical',
+            floating: true,
+            backgroundColor: '#FFFFFF',
+            align: 'left',
+            verticalAlign: 'top',
+            y: 60,
+            x: 50
+        },
+        series: [{
+            name: "At the Helm",
+            data: <%= cumulative_team_gaa("At the Helm") %>
+          	},{ 
+            name: "Big Douche-Hayne",
+            data: <%= cumulative_team_gaa("Big Douche-Hayne") %>
+            },{ 
+            name: "Chris's Team",
+            data: <%= cumulative_team_gaa("Chris's Team") %>
+            },{ 
+            name: "Double Pennertration",
+            data: <%= cumulative_team_gaa("Double Pennertration") %>
+            },{ 
+            name: "Hamhuis Sandwich's",
+            data: <%= cumulative_team_gaa("Hamhuis Sandwich's") %>
+            },{ 
+            name: "Keith's Great Team",
+            data: <%= cumulative_team_gaa("Keith's Great Team") %>
+            },{ 
+            name: "Lookin Sharp",
+            data: <%= cumulative_team_gaa("Lookin Sharp") %>
+            },{ 
+            name: "Teemu's Salami",
+            data: <%= cumulative_team_gaa("Teemu's Salami") %>
+            },{ 
+            name: "The Saadfather",
+            data: <%= cumulative_team_gaa("The Saadfather") %>
+            },{
+            name: "Yippee Kai Yo Paille",
+            data: <%= cumulative_team_gaa("Yippee Kai Yo Paille") %>
+        }]
+    });
+	});
+</script>
 <div id="wpw-chart"></div>
 <div id="tw-chart-full"></div>
 <div id="pie-chart"></div>
