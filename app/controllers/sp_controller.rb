@@ -17,7 +17,7 @@ class SpController < ApplicationController
   		next if index == 0
   		team_save_p_array[index] = compute_average(team_save_p_array, index)
   	end
-    team_save_p_array = team_save_p_array.map {|y| y.to_f } 
+    team_save_p_array = team_save_p_array.map {|y| y.to_f.round(3) } 
   end
 
   def compute_average_array(array_of_save_p)
@@ -32,7 +32,7 @@ class SpController < ApplicationController
     total = 0
     count = index
     while(count >= 0) do
-      total = total + array_of_save_p[index]
+      total = total + array_of_save_p[count]
       count = count - 1 
     end
     total = total / (index + 1.0)
