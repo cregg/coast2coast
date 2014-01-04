@@ -1,20 +1,20 @@
 <script type="text/javascript" charset="utf-8">
   $(function () {
-     $("#wpw-chart").highcharts({
+     $('#wpw-chart').highcharts({
         chart: {
             type: 'line'
         },
         title: {
-            text: "Goals per Week"  
+        		text: "Goals per Week"	
         },
         xAxis: {
             categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
         },
         yAxis:{
-          title: {
-            text: "Wins"  
-          },
-          min: 0
+        	title: {
+        		text: "Wins"	
+        	},
+        	min: 0
         },
         legend: {
             floating: true,
@@ -26,7 +26,7 @@
         series: [{
             name: "At the Helm",
             data: <%= weekly_team_goals("At the Helm") %>
-            },{ 
+          	},{ 
             name: "Big Douche-Hayne",
             data: <%= weekly_team_goals("Big Douche-Hayne") %>
             },{ 
@@ -56,21 +56,21 @@
         }]
     });
 
-    $("#tw-chart").highcharts({
+		$('#tw-chart').highcharts({
         chart: {
             type: 'line'
         },
         title: {
-            text: "Cumulative Goals" 
+        		text: "Cumulative Goals"	
         },
         xAxis: {
             categories: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9', 'Week 10', 'Week 11', 'Week 12']
         },
         yAxis:{
-          title: {
-            text: "Wins",
-          },
-          min: 0
+        	title: {
+        		text: "Wins",
+        	},
+        	min: 0
         },
         legend: {
             layout: 'vertical',
@@ -84,7 +84,7 @@
         series: [{
             name: "At the Helm",
             data: <%= cumulative_team_goals("At the Helm") %>
-            },{ 
+          	},{ 
             name: "Big Douche-Hayne",
             data: <%= cumulative_team_goals("Big Douche-Hayne") %>
             },{ 
@@ -114,21 +114,18 @@
         }]
     });
 
-    $("#pie-chart").highcharts({
-      chart:{
-        renderTo:'pie-chart',
-      },
-      title: {
-        text: "Total Goals"
-      },
-      series: [{
-          type: 'pie',
-          data: <%= raw goal_totals.to_json %>,
-          name: "Total Goals"
-      }]
+    $('#pie-chart').highcharts({
+    	title: {
+    		text: "Total Goals"
+    	},
+    	series: [{
+    			type: 'pie',
+    			data: <%= raw goal_totals.to_json %>,
+    			name: "Wins"
+    	}]
 
-    }); 
-  });
+    });	
+	});
 </script>
 <div id="wpw-chart"></div>
 <div id="tw-chart"></div>
