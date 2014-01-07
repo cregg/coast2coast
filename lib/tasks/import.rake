@@ -3,8 +3,7 @@ require 'pry'
 namespace :import do 
 	task :week => :environment do
 		CSV.foreach("lib/scrapers/results.csv", headers: true) do |row|
-			values = row.to_hash
-			Week.create! values
+			Week.create! row.to_hash
 		end
 	end
 end

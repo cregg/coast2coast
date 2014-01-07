@@ -35,8 +35,11 @@ group :doc do
 end
 
 # Scraping tools
-# gem 'capybara'
-# gem 'capybara-webkit'
+group :development do
+	gem 'capybara'
+	gem 'capybara-webkit'
+end
+
 gem 'pry'
 gem 'selenium-webdriver'
 gem 'launchy'

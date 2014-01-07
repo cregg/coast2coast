@@ -5,10 +5,9 @@ class StaticPagesController < ApplicationController
   end
 
   def weekly_team_score(name)
-  	team_weeks = Week.where(team: name).take(15)
+  	team_weeks = Week.where(team: name)
   	team_score_array = team_weeks.map {|y| y.score}
-  	team_score_array.pop
-  	team_score_array
+    team_score_array
   end
 
   def team_totals
@@ -33,13 +32,12 @@ class StaticPagesController < ApplicationController
   end
 
   def cumulative_team_score(name)
-  	team_weeks = Week.where(team: name).take(15)
+  	team_weeks = Week.where(team: name)
   	team_score_array = team_weeks.map {|y| y.score}
-  	team_score_array.pop
   	team_score_array.each_index do |index|
   		next if index == 0
   		team_score_array[index] = team_score_array[index] + team_score_array[index-1]
-  	end 
+  	end
   	team_score_array
   end
 

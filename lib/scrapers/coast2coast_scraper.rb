@@ -9,11 +9,7 @@ require "pry"
 require "csv"
 
 Capybara.run_server = false
-# Capybara.javascript_driver = :webkit
 Capybara.current_driver = :selenium
-# Capybara.register_driver :selenium do |app|
-#   Capybara::Selenium::Driver.new(app, :browser => :chrome)
-# end
 
 
 module Scraper
@@ -37,7 +33,7 @@ module Scraper
 
           weeks = Array.new(get_week_number(session))
           
-          (0..(weeks.length - 1)).each do |i|
+          (12..(weeks.length - 1)).each do |i|
             (1..10).step(2) do |j|
               session.visit("http://hockey.fantasysports.yahoo.com/hockey/21031/matchup?week=#{i+1}&mid1=#{j}&mid2=#{j+1}") 
               weeks[i] = weeks[i].merge get_matchup_hash session unless weeks[i] == nil
@@ -51,8 +47,8 @@ module Scraper
         end
 
         def sign_in(session)
-          session.fill_in('Email', :with => 'email')
-          session.fill_in('Password', :with => 'password')
+          session.fill_in('Email', :with => 'craigleclair4@gmail.com')
+          session.fill_in('Password', :with => 'hooplaH911')
           session.click_button('Sign in')
         end
 
@@ -100,6 +96,7 @@ module Scraper
         column_names = ["Week", "Team Name", "G", "A", "+/-", "PIM", "PPP", "HIT", "BLK", "W", "GAA", "SV", "SV%", "Score"]
         CSV.open("results.csv", "wb") do |csv|
           weeks.each_index do |index|
+            next if weeks[index] == nil
             weeks[index].keys.each do |key|
               values = weeks[index][key].values
               values = values.unshift(key)
