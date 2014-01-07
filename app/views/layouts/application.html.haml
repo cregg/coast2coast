@@ -8,29 +8,30 @@
   = yield(:head)
 %body
   .row
-  .large-12.columns
-    %ul.button-group.right
+  .medium-2.columns.right
+    %a.button{"data-dropdown" => "drop"} Stats »
+    %ul#drop.medium.f-dropdown
       %li
-      .button=link_to 'Goals', '/goals/goalsdata', data: {push: true}
+        =link_to 'Wins', root_path
       %li
-      .button=link_to 'Assists', '/assists/assistsdata', data: {push: true}
+        =link_to 'Goals', '/goals/goalsdata'
       %li
-      .button=link_to 'Plus/Minus', '/plus_minus/pmdata', data: {push: true}
+        =link_to 'Assists', '/assists/assistsdata'
       %li
-      .button=link_to 'PIMS', '/pim/pimdata', data: {push: true}
+        =link_to 'Plus/Minus', '/plus_minus/pmdata'
       %li
-      .button=link_to 'Hits', '/hits/hitdata', data: {push: true}
+        =link_to 'PIMS', '/pim/pimdata'
       %li
-      .button=link_to 'PPP', '/ppp/pppdata', data: {push: true}
+        =link_to 'Hits', '/hits/hitdata'
       %li
-      .button=link_to 'Blocks', '/blocks/blocksdata', data: {push: true}
+        =link_to 'PPP', '/ppp/pppdata'
       %li
-      .button=link_to 'GAA', '/gaa/gaadata', data: {push: true}
+        =link_to 'Blocks', '/blocks/blocksdata'
       %li
-      .button=link_to 'Wins', '/wins/winsdata', data: {push: true}
+        =link_to 'GAA', '/gaa/gaadata'
       %li
-      .button=link_to 'Saves', '/saves/savedata', data: {push: true}
+        =link_to 'Goalie Wins', '/wins/winsdata'
       %li
-      .button=link_to 'Save %', '/sp/spdata', data: {push: true}
+        =link_to 'Saves', '/saves/savedata'
   = yield
   = javascript_include_tag "application"
