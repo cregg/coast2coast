@@ -33,22 +33,15 @@ module Scraper
 
           weeks = Array.new(get_week_number(session))
           
-          (12..(weeks.length - 1)).each do |i|
-            (1..10).step(2) do |j|
-              session.visit("http://hockey.fantasysports.yahoo.com/hockey/21031/matchup?week=#{i+1}&mid1=#{j}&mid2=#{j+1}") 
-              weeks[i] = weeks[i].merge get_matchup_hash session unless weeks[i] == nil
-              weeks[i] = get_matchup_hash session if weeks[i] == nil
-            end
-            puts weeks
-          end
+          weeks = weekly_matchups weeks
           
           to_CSV(weeks)
 
         end
 
         def sign_in(session)
-          session.fill_in('Email', :with => 'craigleclair4@gmail.com')
-          session.fill_in('Password', :with => 'hooplaH911')
+          session.fill_in('Email', :with => 'test')
+          session.fill_in('Password', :with => 'test')
           session.click_button('Sign in')
         end
 
@@ -90,6 +83,16 @@ module Scraper
           end
         end
           stats
+      end
+
+      def weekly_matchups(weeks)
+        (12..(weeks.length - 1)).each do |i|
+            (1..10).step(2) do |j|
+              session.visit("http://hockey.fantasysports.yahoo.com/hockey/21031/matchup?week=#{i+1}&mid1=#{j}&mid2=#{j+1}") 
+              weeks[i] = weeks[i].merge get_matchup_hash session unless weeks[i] == nil
+              weeks[i] = get_matchup_hash session if weeks[i] == nil
+            end
+          end
       end
 
       def to_CSV(weeks)
