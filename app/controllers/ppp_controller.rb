@@ -5,7 +5,6 @@ class PppController < ApplicationController
   def weekly_team_ppp(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_ppp_array = team_weeks.map {|y| y.ppp}
-  	team_ppp_array.pop
   	team_ppp_array
   end
 
@@ -33,7 +32,6 @@ class PppController < ApplicationController
   def cumulative_team_ppp(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_ppp_array = team_weeks.map {|y| y.ppp}
-  	team_ppp_array.pop
   	team_ppp_array.each_index do |index|
   		next if index == 0
   		team_ppp_array[index] = team_ppp_array[index] + team_ppp_array[index-1]

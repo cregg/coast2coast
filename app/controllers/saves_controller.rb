@@ -5,7 +5,6 @@ class SavesController < ApplicationController
   def weekly_team_saves(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_saves_array = team_weeks.map {|y| y.saves}
-  	team_saves_array.pop
   	team_saves_array
   end
 
@@ -33,7 +32,6 @@ class SavesController < ApplicationController
   def cumulative_team_saves(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_saves_array = team_weeks.map {|y| y.saves}
-  	team_saves_array.pop
   	team_saves_array.each_index do |index|
   		next if index == 0
   		team_saves_array[index] = team_saves_array[index] + team_saves_array[index-1]

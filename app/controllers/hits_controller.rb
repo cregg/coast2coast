@@ -5,7 +5,6 @@ class HitsController < ApplicationController
   def weekly_team_hits(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_hits_array = team_weeks.map {|y| y.hits}
-  	team_hits_array.pop
   	team_hits_array
   end
 
@@ -33,7 +32,6 @@ class HitsController < ApplicationController
   def cumulative_team_hits(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_hits_array = team_weeks.map {|y| y.hits}
-  	team_hits_array.pop
   	team_hits_array.each_index do |index|
   		next if index == 0
   		team_hits_array[index] = team_hits_array[index] + team_hits_array[index-1]

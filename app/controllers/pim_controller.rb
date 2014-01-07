@@ -5,7 +5,6 @@ class PimController < ApplicationController
   def weekly_team_pims(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_pims_array = team_weeks.map {|y| y.pims}
-  	team_pims_array.pop
   	team_pims_array
   end
 
@@ -33,7 +32,6 @@ class PimController < ApplicationController
   def cumulative_team_pims(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_pims_array = team_weeks.map {|y| y.pims}
-  	team_pims_array.pop
   	team_pims_array.each_index do |index|
   		next if index == 0
   		team_pims_array[index] = team_pims_array[index] + team_pims_array[index-1]

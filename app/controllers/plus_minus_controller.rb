@@ -5,7 +5,6 @@ class PlusMinusController < ApplicationController
   def weekly_team_plus_minus(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_plus_minus_array = team_weeks.map {|y| y.plus_minus}
-  	team_plus_minus_array.pop
   	team_plus_minus_array
   end
 
@@ -33,7 +32,6 @@ class PlusMinusController < ApplicationController
   def cumulative_team_plus_minus(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_plus_minus_array = team_weeks.map {|y| y.plus_minus}
-  	team_plus_minus_array.pop
   	team_plus_minus_array.each_index do |index|
   		next if index == 0
   		team_plus_minus_array[index] = team_plus_minus_array[index] + team_plus_minus_array[index-1]

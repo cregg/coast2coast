@@ -5,14 +5,12 @@ class SpController < ApplicationController
   def weekly_team_save_p(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_save_p_array = team_weeks.map {|y| y.save_p}
-  	team_save_p_array.pop
     team_save_p_array = team_save_p_array.map {|y| y.to_f}
   end
 
   def cumulative_team_save_p(name)
   	team_weeks = Week.where(team: name).take(15)
   	team_save_p_array = team_weeks.map {|y| y.save_p}
-  	team_save_p_array.pop
   	team_save_p_array.each_index do |index|
   		next if index == 0
   		team_save_p_array[index] = compute_average(team_save_p_array, index)
