@@ -6,7 +6,4 @@ This is a very simple app which currently is being hosted at coast2coast.herokua
 
 * Using a MySQL Database in production and development.
 
-Much code refactoring needs to be done as the site was created as quickly as possible over the holiday break. 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Much code refactoring needs to be done as the site was created as quickly as possible over the holiday break.
