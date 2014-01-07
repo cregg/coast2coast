@@ -30,8 +30,6 @@ module Scraper
           session.within(:css, '#sitenav') do
             session.click_link('League')
           end
-
-          weeks = Array.new(get_week_number(session))
           
           weeks = weekly_matchups weeks
           
@@ -85,7 +83,8 @@ module Scraper
           stats
       end
 
-      def weekly_matchups(weeks)
+      def weekly_matchups(session)
+        weeks = Array.new(get_week_number(session))
         (12..(weeks.length - 1)).each do |i|
             (1..10).step(2) do |j|
               session.visit("http://hockey.fantasysports.yahoo.com/hockey/21031/matchup?week=#{i+1}&mid1=#{j}&mid2=#{j+1}") 
