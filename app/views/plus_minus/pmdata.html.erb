@@ -55,7 +55,7 @@
         }]
     });
 
-		$('#tw-chart-full').highcharts({
+		$('#tw-chart').highcharts({
         chart: {
             type: 'line'
         },
@@ -110,9 +110,51 @@
             name: "Yippee Kai Yo Paille",
             data: <%= cumulative_team_plus_minus("Yippee Kai Yo Paille") %>
         }]
+    });
+
+    $('#pie-chart').highcharts({
+    
+        chart: {
+            type: 'columnrange',
+            inverted: false
+        },
+        
+        title: {
+            text: 'Highest vs Lowest +/-'
+        },
+    
+        xAxis: {
+            categories: ['At the Helm', 'Big Duchence', 'Chris\'s Team', 
+            'Dustin Pennertration', 'Hamhuis Sandwich', 'Keith\'s Great Team', 
+            'Lookin Sharp', 'Teemu\'s Salami', 'The Saadfather', 
+            'Yippee Kai Yo Paille']
+        },
+        
+        yAxis: {
+            title: {
+                text: 'Plus Minus'
+            }
+        },
+        
+        plotOptions: {
+            columnrange: {
+                dataLabels: {
+                    enabled: true,
+                    formatter: function () {
+                        return this.y;
+                    }
+                }
+            }
+        },
+    
+        series: [{
+            name: 'Plus Minus',
+            data: <%= high_low_pm %>
+        }]
+    
     });	
 });
 </script>
 <div id="wpw-chart"></div>
-<div id="tw-chart-full"></div>
+<div id="tw-chart"></div>
 <div id="pie-chart"></div>

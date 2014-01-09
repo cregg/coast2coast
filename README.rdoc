@@ -7,3 +7,5 @@ This is a very simple app which currently is being hosted at coast2coast.herokua
 * Using a MySQL Database in production and development.
 
 Much code refactoring needs to be done as the site was created as quickly as possible over the holiday break.
+
+For example unholy inline JS should be refactored to coffeescript and moved to their respective files. 

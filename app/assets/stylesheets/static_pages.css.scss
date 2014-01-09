@@ -4,9 +4,9 @@
 
 #wpw-chart {
 	height: 700px;
+	margin-bottom: 20px;
 }
 #tw-chart {
-	padding-top: 20px;
 	position: relative;
 	top:40px;
 	height: 550px;
@@ -14,7 +14,6 @@
 	float: left;
 }
 #pie-chart {
-	padding-top: 20px;
 	top:40px;
 	height: 550px;
 	position: relative;
@@ -22,10 +21,12 @@
 	float: right;
 }
 #tw-chart-full {
-	padding-top: 20px;
 	position: relative;
 	top:40px;
 	height: 550px;
 	width: 100%;
 	float: left;
+}
+.center{
+	position: center;
 }

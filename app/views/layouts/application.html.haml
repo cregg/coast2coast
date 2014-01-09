@@ -5,33 +5,34 @@
   %script{src: "http://code.jquery.com/jquery-latest.min.js", type: "text/javascript"}
   = stylesheet_link_tag "application"
   = csrf_meta_tags
-  = yield(:head)
 %body
   .row
-  .medium-2.columns.right
-    %a.button{"data-dropdown" => "drop"} Stats »
-    %ul#drop.medium.f-dropdown
-      %li
-        =link_to 'Wins', root_path
-      %li
-        =link_to 'Goals', '/goals/goalsdata'
-      %li
-        =link_to 'Assists', '/assists/assistsdata'
-      %li
-        =link_to 'Plus/Minus', '/plus_minus/pmdata'
-      %li
-        =link_to 'PIMS', '/pim/pimdata'
-      %li
-        =link_to 'Hits', '/hits/hitdata'
-      %li
-        =link_to 'PPP', '/ppp/pppdata'
-      %li
-        =link_to 'Blocks', '/blocks/blocksdata'
-      %li
-        =link_to 'GAA', '/gaa/gaadata'
-      %li
-        =link_to 'Goalie Wins', '/wins/winsdata'
-      %li
-        =link_to 'Saves', '/saves/savedata'
+    .medium-6.medium-push-6.columns
+      %h1 Coast2Coast
+    .medium-6.medium-pull-6.columns
+      %a.button{"data-dropdown" => "drop"} Stats »
+      %ul#drop.medium.f-dropdown
+        %li
+          =link_to 'Wins', root_path
+        %li
+          =link_to 'Goals', '/goals/goalsdata'
+        %li
+          =link_to 'Assists', '/assists/assistsdata'
+        %li
+          =link_to 'Plus/Minus', '/plus_minus/pmdata'
+        %li
+          =link_to 'PIMS', '/pim/pimdata'
+        %li
+          =link_to 'Hits', '/hits/hitdata'
+        %li
+          =link_to 'PPP', '/ppp/pppdata'
+        %li
+          =link_to 'Blocks', '/blocks/blocksdata'
+        %li
+          =link_to 'GAA', '/gaa/gaadata'
+        %li
+          =link_to 'Goalie Wins', '/wins/winsdata'
+        %li
+          =link_to 'Saves', '/saves/savedata' 
   = yield
   = javascript_include_tag "application"

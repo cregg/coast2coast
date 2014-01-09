@@ -1,6 +1,6 @@
 class PlusMinusController < ApplicationController
   helper_method :weekly_team_plus_minus, :plus_minus_totals, 
-  :cumulative_team_plus_minus
+  :cumulative_team_plus_minus, :high_low_pm
 
   def weekly_team_plus_minus(name)
   	team_weeks = Week.where(team: name).take(15)
@@ -37,6 +37,30 @@ class PlusMinusController < ApplicationController
   		team_plus_minus_array[index] = team_plus_minus_array[index] + team_plus_minus_array[index-1]
   	end 
   	team_plus_minus_array
+  end
+
+  def high_low_pm
+    weeks = Week.all.order(:team)
+    results = Array.new(Array.new)
+    high_low = Array.new
+    name = "At the Helm"
+    min = 0
+    max = 0
+    weeks.each do |week|
+      if week.team == name
+        min = week.plus_minus if week.plus_minus < min
+        max = week.plus_minus if week.plus_minus > max 
+      else
+        high_low << min << max
+        results << high_low
+        name = week.team
+        min = week.plus_minus
+        max = week.plus_minus
+        high_low = Array.new
+      end
+    end
+    high_low << min << max
+    results << high_low
   end
 
   def pmdata
