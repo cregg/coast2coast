@@ -34,7 +34,6 @@ module Scraper
             transactions = get_transactions session
             oneTransaction = get_3 transactions
             twoTransactions = get_4 transactions
-            otherTransactions = get_other transactions
             binding.pry 
           rescue Exception => e
             puts e
@@ -44,8 +43,8 @@ module Scraper
         end
 
         def sign_in(session)
-          session.fill_in('Email', :with => 'craigleclair4@gmail.com')
-          session.fill_in('Password', :with => 'hooplaH911')
+          session.fill_in('Email', :with => 'test')
+          session.fill_in('Password', :with => 'test')
           session.click_button('Sign in')
         end
         def get_transactions(session)
@@ -77,13 +76,6 @@ module Scraper
           sizeOfTwo
         end
 
-        def get_other(transactions)
-          sizeOfOther = Array.new
-          transactions.each do |transaction|
-            sizeOfOther << transaction if (transaction.count != 4 && transaction.count != 3)
-          end
-          sizeOfOther
-        end
     end
 end
 
