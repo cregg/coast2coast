@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230221010) do
+ActiveRecord::Schema.define(version: 20140114225209) do
+
+  create_table "team_of_the_weeks", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "week"
+    t.string   "goalteam"
+    t.string   "assistteam"
+    t.string   "plus_minusteam"
+    t.string   "pimteam"
+    t.string   "hitteam"
+    t.string   "pppteam"
+    t.string   "blockteam"
+    t.string   "gaateam"
+    t.string   "winteam"
+    t.string   "saveteam"
+    t.string   "save_pteam"
+  end
 
   create_table "weeks", force: true do |t|
     t.integer  "week_number"
