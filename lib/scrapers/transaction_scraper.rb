@@ -17,7 +17,7 @@ module Scraper
     include Capybara::DSL
         def get_results
           begin
-            session = Capybara::Session.new(:webkit)
+            session = Capybara::Session.new(:selenium)
             session.visit('http://hockey.fantasysports.yahoo.com/')
             session.click_link('Sign In')
             session.click_link('Google')
@@ -32,8 +32,8 @@ module Scraper
             end
             
             transactions = get_transactions session
-            oneTransaction = get_3 transactions
-            twoTransactions = get_4 transactions
+            transactions = prune_transactions transactions
+            transactions = organize_transactions transactions
             binding.pry 
           rescue Exception => e
             puts e
@@ -43,10 +43,11 @@ module Scraper
         end
 
         def sign_in(session)
-          session.fill_in('Email', :with => 'test')
-          session.fill_in('Password', :with => 'test')
+          session.fill_in('Email', :with => 'craigleclair4@gmail.com')
+          session.fill_in('Password', :with => 'hooplaH911')
           session.click_button('Sign in')
         end
+        
         def get_transactions(session)
             transactions = Array.new(Array.new)
             session.find(:css, '.Tst-link').click
@@ -76,6 +77,37 @@ module Scraper
           sizeOfTwo
         end
 
+        def prune_transactions(transactions)
+          transactions.each do |transaction|
+            transactions.pop if (transaction.count != 3 || transaction.count != 4)
+          end
+          transactions
+        end
+
+        def organize_transactions(transactions)
+          transactions.each do |transaction|
+            if transaction.count == 4
+              temp = transaction[0]
+              transaction[0] = transaction[3]
+              transaction[3] = temp
+              temp = transaction[1] 
+              transaction[1] = transaction[2]
+              tra  
+            end
+             
+            transaction[0] = transaction[2] if transaction.count == 3
+          end
+        end
+
+        def to_CSV(transactions)
+        column_names = ["Player 1", "Player 2", "Date", "Team"]
+        CSV.open("transaction_results.csv", "wb") do |csv|
+          csv << column_names
+          transactions.each do |trans|
+              csv << trans
+            end
+          end
+        end
     end
 end
 

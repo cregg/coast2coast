@@ -31,15 +31,15 @@ module Scraper
             session.click_link('League')
           end
           
-          weeks = weekly_matchups weeks
+          weeks = weekly_matchups session
           
           to_CSV(weeks)
 
         end
 
         def sign_in(session)
-          session.fill_in('Email', :with => 'test')
-          session.fill_in('Password', :with => 'test')
+          session.fill_in('Email', :with => 'craigleclair4')
+          session.fill_in('Password', :with => 'hooplaH911')
           session.click_button('Sign in')
         end
 
@@ -92,6 +92,7 @@ module Scraper
               weeks[i] = get_matchup_hash session if weeks[i] == nil
             end
           end
+          weeks
       end
 
       def to_CSV(weeks)
