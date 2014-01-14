@@ -1,0 +1,17 @@
+%h1 Listing team_of_the_weeks
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @team_of_the_weeks.each do |team_of_the_week|
+    %tr
+      %td= link_to 'Show', team_of_the_week
+      %td= link_to 'Edit', edit_team_of_the_week_path(team_of_the_week)
+      %td= link_to 'Destroy', team_of_the_week, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Team of the week', new_team_of_the_week_path

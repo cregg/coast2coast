@@ -1,5 +1,7 @@
 Coast2coast::Application.routes.draw do
   
+  resources :team_of_the_weeks
+
   # get 'static_pages/home'
   root "static_pages#home"
   get "sp/spdata"

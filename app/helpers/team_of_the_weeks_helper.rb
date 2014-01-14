@@ -1,0 +1,2 @@
+module TeamOfTheWeeksHelper
+end
