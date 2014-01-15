@@ -1,5 +1,67 @@
 %p#notice= notice
 
+.center 
+  %h2 Team of the week for week #{(@team_of_the_week.week.to_i + 1)}
+
+.center-50
+  %h3 Skater Categories
+%table.center-75
+  %thead
+    %tr
+      %th
+        Goals
+      %th
+        Assists
+      %th
+        Plus Minus
+      %th
+        PIMS
+      %th
+        PPP
+      %th
+        Hits
+      %th
+        Blocks
+    %tr
+      %td
+        =@team_of_the_week.goalteam
+      %td
+        =@team_of_the_week.assistteam
+      %td
+        =@team_of_the_week.plus_minusteam
+      %td
+        =@team_of_the_week.pimteam
+      %td
+        =@team_of_the_week.pppteam
+      %td
+        =@team_of_the_week.hitteam
+      %td
+        =@team_of_the_week.blockteam
+.center-50
+  %h3 Goalie Categories
+%table.center-50
+  %thead
+    %tr
+      %th
+        Wins
+      %th
+        Goals Against Average
+      %th
+        Saves
+      %th
+        Save Percentage
+    %tr
+      %td
+        =@team_of_the_week.winteam
+      %td
+        =@team_of_the_week.gaateam
+      %td
+        =@team_of_the_week.saveteam
+      %td
+        =@team_of_the_week.save_pteam
+
+
+
 
 = link_to 'Edit', edit_team_of_the_week_path(@team_of_the_week)
 \|

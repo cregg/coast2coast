@@ -16,7 +16,7 @@ namespace :import do
 			statsHash[:hits] = 0
 			statsHash[:ppp] = 0
 			statsHash[:blocks] = 0
-			statsHash[:gaa] = 0
+			statsHash[:gaa] = 10.0
 			statsHash[:wins] = 0
 			statsHash[:save_p] = 0
 			statsHash[:saves] = 0
@@ -25,58 +25,58 @@ namespace :import do
 		end
 
 		weeks = Week.all.order(:week_number)
+		statsHash = init_hash
+		teamHash = Hash.new
 		weeks.each_index do | index |
-			statsHash = init_hash if index % 10 == 0
-			teamHash = Hash.new if index % 10 == 0
-			binding.pry
 			if weeks[index].goals > statsHash[:goals]
 				statsHash[:goals] = weeks[index].goals
 				teamHash[:goalteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:assists]
-				statsHash[:assists] = weeks[index].goals
+			if weeks[index].assists > statsHash[:assists]
+				statsHash[:assists] = weeks[index].assists
 				teamHash[:assistteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:pims]
-				statsHash[:pims] = weeks[index].goals
+			if weeks[index].pims > statsHash[:pims]
+				statsHash[:pims] = weeks[index].pims
 				teamHash[:pimteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:hits]
-				statsHash[:hits] = weeks[index].goals
-				teamHash[:hitteam] 	= weeks[index].team
+			if weeks[index].hits > statsHash[:hits]
+				statsHash[:hits] = weeks[index].hits
+				teamHash[:hitteam] = weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:ppp]
-				statsHash[:ppp] = weeks[index].goals
+			if weeks[index].ppp > statsHash[:ppp]
+				statsHash[:ppp] = weeks[index].ppp
 				teamHash[:pppteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:blocks]
-				statsHash[:blocks] = weeks[index].goals
+			if weeks[index].blocks > statsHash[:blocks]
+				statsHash[:blocks] = weeks[index].blocks
 				teamHash[:blockteam] 	= weeks[index].team
 			end
-			if weeks[index].goals < statsHash[:gaa]
-				statsHash[:gaa] = weeks[index].goals
+			if weeks[index].gaa < statsHash[:gaa]
+				statsHash[:gaa] = weeks[index].gaa
 				teamHash[:gaateam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:wins]
-				statsHash[:wins] = weeks[index].goals
+			if weeks[index].wins > statsHash[:wins]
+				statsHash[:wins] = weeks[index].wins
 				teamHash[:winteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:save_p]
-				statsHash[:save_p] = weeks[index].goals
+			if weeks[index].save_p > statsHash[:save_p]
+				statsHash[:save_p] = weeks[index].save_p
 				teamHash[:save_pteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:saves]
-				statsHash[:saves] = weeks[index].goals
+			if weeks[index].saves > statsHash[:saves]
+				statsHash[:saves] = weeks[index].saves
 				teamHash[:saveteam] 	= weeks[index].team
 			end
-			if weeks[index].goals > statsHash[:plus_minus]
-				statsHash[:plus_minus] = weeks[index].goals
+			if weeks[index].plus_minus > statsHash[:plus_minus]
+				statsHash[:plus_minus] = weeks[index].plus_minus
 				teamHash[:plus_minusteam] 	= weeks[index].team
 			end
 
 			if index % 10 == 9
 				teamHash[:week] = weeks[index].week_number
 				TeamOfTheWeek.create! teamHash
+				statsHash = init_hash
 			end
 		end
 	end

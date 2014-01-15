@@ -10,6 +10,7 @@ class TeamOfTheWeeksController < ApplicationController
   # GET /team_of_the_weeks/1
   # GET /team_of_the_weeks/1.json
   def show
+    @team_of_the_week = TeamOfTheWeek.find(params[:id])
   end
 
   # GET /team_of_the_weeks/new
