@@ -13,6 +13,17 @@
  *= require_tree .
  */
 
-.header{
+.header {
 	background-color: #e9e9e9;
+}
+
+.ddown-head {
+  position: absolute;
+  height: 70px;
+}
+
+.header-center {
+  position: absolute;
+  text-align: center;
+  left: 50%;
 }

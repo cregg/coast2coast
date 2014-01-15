@@ -7,33 +7,31 @@
   = csrf_meta_tags
 %body
   .header
-    .row
-      .medium-6.medium-push-6.columns
-        %h1 Coast2Coast
-      .medium-6.medium-pull-6.columns
-        %a.button{"data-dropdown" => "drop"} Stats »
-        %ul#drop.medium.f-dropdown
-          %li
-            =link_to 'Wins', root_path
-          %li
-            =link_to 'Goals', '/goals/goalsdata'
-          %li
-            =link_to 'Assists', '/assists/assistsdata'
-          %li
-            =link_to 'Plus/Minus', '/plus_minus/pmdata'
-          %li
-            =link_to 'PIMS', '/pim/pimdata'
-          %li
-            =link_to 'Hits', '/hits/hitdata'
-          %li
-            =link_to 'PPP', '/ppp/pppdata'
-          %li
-            =link_to 'Blocks', '/blocks/blocksdata'
-          %li
-            =link_to 'GAA', '/gaa/gaadata'
-          %li
-            =link_to 'Goalie Wins', '/wins/winsdata'
-          %li
-            =link_to 'Saves', '/saves/savedata' 
+    %a.ddown-head.button{"data-dropdown" => "drop"} Stats »
+    %ul#drop.medium.f-dropdown
+      %li
+        =link_to 'Wins', root_path
+      %li
+        =link_to 'Goals', '/goals/goalsdata'
+      %li
+        =link_to 'Assists', '/assists/assistsdata'
+      %li
+        =link_to 'Plus/Minus', '/plus_minus/pmdata'
+      %li
+        =link_to 'PIMS', '/pim/pimdata'
+      %li
+        =link_to 'Hits', '/hits/hitdata'
+      %li
+        =link_to 'PPP', '/ppp/pppdata'
+      %li
+        =link_to 'Blocks', '/blocks/blocksdata'
+      %li
+        =link_to 'GAA', '/gaa/gaadata'
+      %li
+        =link_to 'Goalie Wins', '/wins/winsdata'
+      %li
+        =link_to 'Saves', '/saves/savedata' 
+    .header-center 
+      %h1 Coast2Coast
   = yield
   = javascript_include_tag "application"
