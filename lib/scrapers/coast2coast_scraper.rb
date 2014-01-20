@@ -16,24 +16,28 @@ module Scraper
   class Sports
     include Capybara::DSL
         def get_results
-          session = Capybara::Session.new(:webkit)
-          session.visit('http://hockey.fantasysports.yahoo.com/')
-          session.click_link('Sign In')
-          session.click_link('Google')
-          new_window = session.driver.browser.window_handles.last
-           
-          session.within_window new_window do
-            sign_in session
-          end
-          
-          
-          session.within(:css, '#sitenav') do
-            session.click_link('League')
-          end
-          
-          weeks = weekly_matchups session
-          
-          to_CSV(weeks)
+          begin
+            session = Capybara::Session.new(:webkit)
+            session.visit('http://hockey.fantasysports.yahoo.com/')
+            session.click_link('Sign In')
+            session.click_link('Google')
+            new_window = session.driver.browser.window_handles.last
+             
+            session.within_window new_window do
+              sign_in session
+            end
+            
+            
+            session.within(:css, '#sitenav') do
+              session.click_link('League')
+            end
+            
+            weeks = weekly_matchups session
+            
+            to_CSV(weeks)
+        rescue Exception => e
+          binding.pry
+        end
 
         end
 
@@ -85,7 +89,7 @@ module Scraper
 
       def weekly_matchups(session)
         weeks = Array.new(get_week_number(session))
-        (12..(weeks.length - 1)).each do |i|
+        (13..(weeks.length - 2)).each do |i|
             (1..10).step(2) do |j|
               session.visit("http://hockey.fantasysports.yahoo.com/hockey/21031/matchup?week=#{i+1}&mid1=#{j}&mid2=#{j+1}") 
               weeks[i] = weeks[i].merge get_matchup_hash session unless weeks[i] == nil
@@ -96,7 +100,7 @@ module Scraper
       end
 
       def to_CSV(weeks)
-        column_names = ["Week", "Team Name", "G", "A", "+/-", "PIM", "PPP", "HIT", "BLK", "W", "GAA", "SV", "SV%", "Score"]
+        column_names = ["week_number,team,goals,assists,plus_minus,pims,ppp,hits,blocks,wins,gaa,saves,save_p,score"]
         CSV.open("results.csv", "wb") do |csv|
           weeks.each_index do |index|
             next if weeks[index] == nil
