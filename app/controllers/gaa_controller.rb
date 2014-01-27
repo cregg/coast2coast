@@ -3,14 +3,14 @@ class GaaController < ApplicationController
   :cumulative_team_gaa
 
   def weekly_team_gaa(name)
-  	team_weeks = Week.where(team: name).take(15)
+  	team_weeks = Week.where(team: name)
   	team_gaa_array = team_weeks.map {|y| y.gaa }
     team_gaa_array = team_gaa_array.map {|y| y.to_f }
   	team_gaa_array
   end
 
   def cumulative_team_gaa(name)
-  	team_weeks = Week.where(team: name).take(15)
+  	team_weeks = Week.where(team: name)
   	team_gaa_array = team_weeks.map {|y| y.gaa}
   	team_gaa_array = compute_average_array team_gaa_array
     team_gaa_array = team_gaa_array.map {|y| y.to_f.round(2)}

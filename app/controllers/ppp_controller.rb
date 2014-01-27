@@ -3,7 +3,7 @@ class PppController < ApplicationController
   :cumulative_team_ppp
 
   def weekly_team_ppp(name)
-  	team_weeks = Week.where(team: name).take(15)
+  	team_weeks = Week.where(team: name)
   	team_ppp_array = team_weeks.map {|y| y.ppp}
   	team_ppp_array
   end
@@ -30,7 +30,7 @@ class PppController < ApplicationController
   end
 
   def cumulative_team_ppp(name)
-  	team_weeks = Week.where(team: name).take(15)
+  	team_weeks = Week.where(team: name)
   	team_ppp_array = team_weeks.map {|y| y.ppp}
   	team_ppp_array.each_index do |index|
   		next if index == 0
