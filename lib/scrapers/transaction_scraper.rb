@@ -43,8 +43,8 @@ module Scraper
         end
 
         def sign_in(session)
-          session.fill_in('Email', :with => 'craigleclair4@gmail.com')
-          session.fill_in('Password', :with => 'hooplaH911')
+          session.fill_in('Email', :with => 'test')
+          session.fill_in('Password', :with => 'test')
           session.click_button('Sign in')
         end
         

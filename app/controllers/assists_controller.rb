@@ -22,7 +22,7 @@ class AssistsController < ApplicationController
   			results = results << name_and_assists
   			name = week.team
   			total_assists = week.assists
-  			name_and_assists = Array.new			
+  			name_and_assists = Array.new
   		end
   	end
   	name_and_assists = name_and_assists << name << total_assists
