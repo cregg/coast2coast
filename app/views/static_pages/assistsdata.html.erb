@@ -1,14 +1,14 @@
 <script type="text/javascript" charset="utf-8">
-  $(function () {
+  window.onload = $(function () {
      $('#wpw-chart').highcharts({
         chart: {
             type: 'line'
         },
         title: {
-        		text: "Goals per Week"	
+        		text: "Assists per Week"	
         },
         xAxis: {
-            title:{
+                title:{
                     text: "Weeks"
                 },tickInterval: 5
         },
@@ -27,34 +27,34 @@
         },
         series: [{
             name: "At the Helm",
-            data: <%= weekly_team_goals("At the Helm") %>
+            data: <%= weekly_team_assists("At the Helm") %>
           	},{ 
             name: "Big Duchene",
-            data: <%= weekly_team_goals("Big Douche-Hayne") %>
+            data: <%= weekly_team_assists("Big Douche-Hayne") %>
             },{ 
             name: "Chris's Team",
-            data: <%= weekly_team_goals("Chris's Team") %>
+            data: <%= weekly_team_assists("Chris's Team") %>
             },{ 
             name: "Dustin Pennertration",
-            data: <%= weekly_team_goals("Double Pennertration") %>
+            data: <%= weekly_team_assists("Double Pennertration") %>
             },{ 
             name: "Hamhuis Sandwich's",
-            data: <%= weekly_team_goals("Hamhuis Sandwich's") %>
+            data: <%= weekly_team_assists("Hamhuis Sandwich's") %>
             },{ 
             name: "Keith's Great Team",
-            data: <%= weekly_team_goals("Keith's Great Team") %>
+            data: <%= weekly_team_assists("Keith's Great Team") %>
             },{ 
             name: "Lookin Sharp",
-            data: <%= weekly_team_goals("Lookin Sharp") %>
+            data: <%= weekly_team_assists("Lookin Sharp") %>
             },{ 
             name: "Teemu's Salami",
-            data: <%= weekly_team_goals("Teemu's Salami") %>
+            data: <%= weekly_team_assists("Teemu's Salami") %>
             },{ 
             name: "The Saadfather",
-            data: <%= weekly_team_goals("The Saadfather") %>
+            data: <%= weekly_team_assists("The Saadfather") %>
             },{
             name: "Yippee Kai Yo Paille",
-            data: <%= weekly_team_goals("Yippee Kai Yo Paille") %>
+            data: <%= weekly_team_assists("Yippee Kai Yo Paille") %>
         }]
     });
 
@@ -63,10 +63,10 @@
             type: 'line'
         },
         title: {
-        		text: "Cumulative Goals"	
+        		text: "Cumulative Assists"	
         },
         xAxis: {
-            title:{
+                title:{
                     text: "Weeks"
                 },tickInterval: 5
         },
@@ -87,44 +87,44 @@
         },
         series: [{
             name: "At the Helm",
-            data: <%= cumulative_team_goals("At the Helm") %>
+            data: <%= cumulative_team_assists("At the Helm") %>
           	},{ 
             name: "Big Duchene",
-            data: <%= cumulative_team_goals("Big Douche-Hayne") %>
+            data: <%= cumulative_team_assists("Big Douche-Hayne") %>
             },{ 
             name: "Chris's Team",
-            data: <%= cumulative_team_goals("Chris's Team") %>
+            data: <%= cumulative_team_assists("Chris's Team") %>
             },{ 
             name: "Dustin Pennertration",
-            data: <%= cumulative_team_goals("Double Pennertration") %>
+            data: <%= cumulative_team_assists("Double Pennertration") %>
             },{ 
             name: "Hamhuis Sandwich's",
-            data: <%= cumulative_team_goals("Hamhuis Sandwich's") %>
+            data: <%= cumulative_team_assists("Hamhuis Sandwich's") %>
             },{ 
             name: "Keith's Great Team",
-            data: <%= cumulative_team_goals("Keith's Great Team") %>
+            data: <%= cumulative_team_assists("Keith's Great Team") %>
             },{ 
             name: "Lookin Sharp",
-            data: <%= cumulative_team_goals("Lookin Sharp") %>
+            data: <%= cumulative_team_assists("Lookin Sharp") %>
             },{ 
             name: "Teemu's Salami",
-            data: <%= cumulative_team_goals("Teemu's Salami") %>
+            data: <%= cumulative_team_assists("Teemu's Salami") %>
             },{ 
             name: "The Saadfather",
-            data: <%= cumulative_team_goals("The Saadfather") %>
+            data: <%= cumulative_team_assists("The Saadfather") %>
             },{
             name: "Yippee Kai Yo Paille",
-            data: <%= cumulative_team_goals("Yippee Kai Yo Paille") %>
+            data: <%= cumulative_team_assists("Yippee Kai Yo Paille") %>
         }]
     });
 
     $('#pie-chart').highcharts({
     	title: {
-    		text: "Total Goals"
+    		text: "Total Assists"
     	},
     	series: [{
     			type: 'pie',
-    			data: <%= raw goal_totals.to_json %>,
+    			data: <%= raw assist_totals.to_json %>,
     			name: "Wins"
     	}]
 
