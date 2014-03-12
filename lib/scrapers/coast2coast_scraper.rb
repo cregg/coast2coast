@@ -45,6 +45,7 @@ module Scraper
           session.fill_in('Email', :with => 'placeholder')
           session.fill_in('Password', :with => 'placeholder')
           session.click_button('Sign in')
+          session.click_button('Continue')
         end
 
         def get_week_number(session)
@@ -89,7 +90,7 @@ module Scraper
 
       def weekly_matchups(session)
         weeks = Array.new(get_week_number(session))
-        (16..(weeks.length - 1)).each do |i|
+        (17..(weeks.length - 1)).each do |i|
             (1..10).step(2) do |j|
               session.visit("http://hockey.fantasysports.yahoo.com/hockey/21031/matchup?week=#{i+1}&mid1=#{j}&mid2=#{j+1}") 
               weeks[i] = weeks[i].merge get_matchup_hash session unless weeks[i] == nil

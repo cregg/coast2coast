@@ -117,15 +117,20 @@
         }]
     });
 
-    $('#pie-chart').highcharts({
+    $('#total-chart').highcharts({
     	chart:{
-    		renderTo:'pie-chart',
+    		renderTo:'total-chart',
     	},
+            xAxis:{
+                categories: ["At the Helm", "Big Duchene", "Chris's Team", "Dustin Pennertration",
+                "Hamhuis Sandwich's",  "Keith's Great Team", "Keith's Great Team", 
+                "Lookin Sharp", "Teemu's Salami", "The Saadfather", "Yippee Kai Yo Paille"]
+            },
     	title: {
-    		text: "Percentage of Saves"
+    		text: "Total Saves"
     	},
     	series: [{
-    			type: 'pie',
+    			type: 'column',
     			data: <%= raw save_totals.to_json %>,
     			name: "Saves"
     	}]
@@ -134,5 +139,5 @@
 	});
 </script>
 <div id="wpw-chart"></div>
+<div id="total-chart"></div>
 <div id="tw-chart"></div>
-<div id="pie-chart"></div>

@@ -1,0 +1,1304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html lang="en-US" class="yui3-js-enabled"><head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">	
+   <title>Create a Yahoo account</title>
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+      <link rel="stylesheet" type="text/css" href="https://s.yimg.com/lq/lib/membership/build/css/mmu/235947.css">
+   <!--[if IE 6]>
+<style type="text/css">
+#passwordFldContainer, #passConfFldContainer, #yahooIdFld {
+  float:none;
+  position:relative;
+}
+
+div.error #yahooIdFld-msg {
+  margin:0em -2em 0em 0em;
+}
+</style>
+<![endif]-->
+<!--[if IE]>
+<style type="text/css">
+#tos-label, #tos-text p {
+  padding-top: .5em;
+}
+</style>
+<![endif]-->
+     <style type="text/css">
+     #meter_tag, #meter_tag .meter-block {display:inline;}
+     #meter_tag .meter-block{font-size:6px;margin: 0 2px; padding: 0px 8px;}
+     </style>
+
+<style type="text/css">
+/* new styles */
+html {
+  color: #000;
+height:100%;
+}
+a {
+  color: #0a78cd;
+  text-decoration: none;
+}
+
+body {
+  background: #f5f5f9;
+  font: normal 15px "helvetica neue", helvetica, verdana, tahoma, arial, sans-serif;
+  color: #343d47;
+  text-shadow: 1px 1px 0 #fff;
+  -webkit-text-size-adjust: none;
+  /* Prevent font scaling in landscape */
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  min-width: 21.33333em;
+}
+
+.btn-purple {
+  background: #6e329d;
+  border-radius: 2px;
+  width: 12em;
+  border: 1px solid #421d5f;
+  font-size: 1.33333em;
+  font-weight: bold;
+  color: #fff;
+  height: 2em;
+  font-family: inherit;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  -webkit-appearance: none;
+}
+
+input[type="text"], input[type="password"], select, button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 1em;
+  height: 2.2em;
+  color: #666666;
+  border: 1px solid #B8B8B8;
+  vertical-align: middle;
+  -webkit-box-shadow: inset -1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset -1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset -1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 0em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+select {
+height: 2.3em;
+margin-right: 10px;
+padding:7px;
+}
+
+button{
+font-size:1em !important;
+}
+
+.yui-button {
+border-style: none !important;
+}
+
+.yui-skin-sam .yui-button .first-child {
+border-style: none !important;
+}
+.yui-button button, .yui-button a {
+border: 1px solid #B8B8B8 !important;
+}
+
+span#at{
+  font-size: 1em;
+  padding: 6px;
+}
+
+h1 {
+border-bottom: none !important;
+padding-top: 10px;
+padding-left:30px;
+font-size:150%;
+}
+
+#doc {
+background-color: inherit;
+border: none;
+width:63em;
+}
+
+#doc.no-yid-selection {
+width: 50em;
+}
+
+#yahooid{
+    height: 2.2em; /*same as input[text] */
+    width: 10em;
+}
+
+#container {
+    background-color: #FFF;
+box-shadow: 0px 3px 20px 2px #DDD;
+}
+
+#subheader h3 {
+border-top: 1px solid #D6D6D6;
+display: inline-block;
+padding-top: 5px;
+margin-left:30px;
+}
+
+div#subheader{
+padding-left:0px !important;
+padding-top:20px;
+}
+
+#yid-label-area, #password-label-area, #password-conf-label-area {
+text-align: inherit;
+vertical-align: middle;
+padding-top:7px;
+font-size:1em;
+}
+
+div.yui-gf {
+padding-top: 25px !important;
+padding-left:30px;
+}
+
+#mem_ft {
+    border-top:none !important;
+}
+#yidHelper {
+color:inherit;
+border:1px solid black;
+background-color:#f5f8fa;
+background:#f5f8fa;
+margin-top:5px;
+padding-bottom:8px;
+padding-top:8px;
+padding-left:12px;
+padding-right:12px;
+font: normal 80% "helvetica neue", helvetica, verdana, tahoma, arial, sans-serif;
+}
+
+#yidHelper .hd {
+    color:inherit;
+}
+
+#yidHelper div.bd li {
+color: inherit;
+margin-left:inherit;
+list-style-position: inherit;
+list-style-type: none;
+padding-bottom: 5px;
+}
+
+.error #pass-label, .error #passconf-label {
+padding-left: inherit;
+}
+
+.error #agree-label, .error #yid-label {
+padding-left: inherit;
+}
+
+#yahooIdFld {
+padding-top: 5px;
+word-wrap:break-word;
+}
+
+#passwordFldMsg, #passConfFldMsg, #yahooIdFld-msg {
+font-weight:normal !important;
+font-size: 70%;
+}
+
+/* CSS for New Password Strength features */
+
+.clearall{
+  clear: both;
+  float: none;
+  padding: 0;
+  margin: 0;
+}
+
+.show-password {
+  color: #c7c7c7;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0px;
+  left: 400px;
+  line-height: 2.33333em;
+  height: 2.33333em;
+  display: none;
+}
+
+.icon-medium {
+  display: inline-block;
+  background: url("https://s.yimg.com/sf/chpw/1.0.16/i/sprites.png") no-repeat;
+  background-size: 15px 60px;
+  width: 15px;
+  height: 15px;
+}
+
+.unchecked {
+  background-position: 0 -30px;
+}
+
+.checked {
+  background-position: 0 -45px;
+}
+
+.password-strength {
+  display: none;
+  width: 455px;
+  padding-left: 15px;
+  float: left;
+}
+
+.icon-small {
+  display: inline-block;
+  background: url("https://s.yimg.com/sf/chpw/1.0.16/i/sprites-new.png") no-repeat;
+  background-size: 20px 61px;
+  width: 21px;
+  height: 10px;
+  padding-left: 8px;
+}
+
+.tick-pass {
+  background-position: 8px -10px !important;
+}
+
+.tick-fail {
+  background-position: 8px 0 !important;
+}
+
+.password-input-div {
+  width: 455px;
+  position: relative;
+}
+
+.errorfield {
+  background:none !important;
+  position:static !important;
+  padding-left:15px !important;
+  width:auto !important;
+}
+
+.column {
+  font-size: 11px;
+  padding: 0px;
+  float: left;
+}
+
+/* End of new styles */
+*::-moz-placeholder { color: #A5A5A5; opacity: 1; text-transform: none; }
+html, body, #bd, #ft {background-color:#fafafa !important; text-shadow:none;}
+#doc { width: 100%;}
+.mbr-hd{width:100%;background-color: #fff;}
+#hd {background-color: inherit !important; width:562px;margin:0 auto !important;}
+#container { box-shadow:none; background-color:#fafafa;padding:0.2em;width:562px;margin:0 auto;}
+#subheader {margin:0 !important; padding:0 !important; width:100% !important;}
+#subheader h1 {font-size: 2em !important; margin:0; padding:0 !important;margin-top:0.5em !important;font-weight:200 !important;}
+#subheader h3 {font-size: 1.2em !important; margin:0; padding:0 !important;margin-top:0 !important;font-weight:200 !important;border:0 !important;}
+#yid-suggested { background-color: #eceef1; padding:1em 1.5em;}
+#yid-suggested .s-innerbox{ border: #babdc1 1px solid; text-align: center; font-size:155%; font-weight:normal;padding:0.3em;border-radius:2px;}
+#yid-suggested .s-innerbox span{ color:#9a9a9a; font-weight:200;}
+#yid-suggested .s-desc {text-align:center;margin-top:10px;font-size:1.02em;}
+#yid-suggested .s-desc span{display:block;}
+#yid-confirm {margin-top:15px;}
+#yid-confirm div { margin:0; padding:0;font-size:0.9em; }
+.confirm-btn-purple {
+  background-color: #432a8e !important; border-radius: 2px; border: 1px solid #421d5f;
+  /*font-size: 1.33333em;*/ font-weight: 200; color: #fff; height: 2em; width: 9.4em;
+  font-family: inherit; -webkit-appearance: none; margin:5px 0 10px 0;
+  cursor:pointer;
+}
+.hide {display:none;}
+.row {position:relative;}
+.column { display: inline-block; height: 100%; position: relative; vertical-align: middle; float:none !important;}
+.domain-column { position: absolute; right: 1px; top: 1px; } 
+.show-password {position: absolute; right: 1px; top: 1px; left:auto !important;}
+.domain-column {font:inherit;}
+.show-password {font:inherit;padding:0.55556em;text-align:center;}
+.modern * { -moz-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+input::-ms-clear { display: none; }
+.modern input[type="text"], .modern input[type="password"], .modern select, .placeholder {
+    border: 1px solid #ECECEC; border-radius: 4px; color: #000000;
+    font-size: 1.1em; width: 100% !important;padding:0 0.55556em;
+    box-shadow:none !important; float:none !important;
+}
+.modern input[type="text"]:focus, .modern input[type="password"]:focus, .modern select:focus, .placeholder:focus {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #5771FF !important;
+    outline: 0 none;
+}
+.modern span.domain {
+    color: #C7C7C7; display: inline-block;
+    height: 100%; padding: 0.55556em; text-align: right;
+    vertical-align: middle;
+}
+.suggestions {
+    position: absolute; background: none repeat scroll 0 0 #FFFFFF; border: 1px solid #5771FF !important;
+    border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; top: -4px; width: 100%; z-index: 100;
+}
+.suggestions li { color: #A5A5A5; font-size: 1.1em; padding: 0.27778em 0.55556em; width: 100%; z-index: 100; }
+.suggestions .focus/*, .suggestions li:hover */{ background-color: #5771FF; color: #FFFFFF; }
+.suggestions li a:hover { color: #FFFFFF !important; }
+.validation-message { color: #C00E0C; padding:5px 15px 0 15px; font-size:0.7em;}
+#sugInput {float:none !important;}
+#yidHelperBtn {display:none;}
+#passwordFld { width:100%; padding:0 !important;padding-top:10px !important;margin:0 !important;}
+#passwordFldContainer { float: none; !important; width:100%;}
+.password-input-div { width:100% !important; }
+.password-strength {float:none !important; padding:0 !important;margin:0 !important;white-space:nowrap;}
+#Agreement { margin:2em 0 0 0 !important; padding:0 !important;width:100% !important;}
+.mbr-page-fade{opacity:.5;background:#000;width:100%;height:100%;z-index:10;top:0;left:0;position:fixed;font:inherit;}
+.mbr-page-fade-content{background-color:white;position:relative;bottom:300px;padding:80px 60px;margin:0 auto;margin-top:55px;width:380px;z-index:11;text-align:center;border-radius:2px;font:inherit;}
+.mbr-page-fade-hd {font-size:1.50em;font-weight:300;margin:4% 10% 0;}
+.mbr-page-fade-bd {font-size:1.09em;font-weight:300;margin:0.5em 12% 5%;}
+#yourNewId, #changeId {display:none !important;}
+.mbr-error { padding:1.2em 0; color:#c91b00;font-size: 0.85em;}
+</style>
+
+<script src="https://s1.yimg.com/rz/l/ai_large_purple.json?format=json&amp;callback=Aniden.showJson"></script><script id="yui_3_3_0_1_13945877947712" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/loader/loader-min.js"></script><script id="yui_3_3_0_1_13945877947713" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/oop/oop-min.js"></script><script id="yui_3_3_0_1_13945877947714" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/event-custom/event-custom-base-min.js"></script><script id="yui_3_3_0_1_13945877947715" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/event/event-base-min.js"></script><script id="yui_3_3_0_1_13945877947716" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/pluginhost/pluginhost-min.js"></script><script id="yui_3_3_0_1_13945877947717" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/dom/dom-min.js"></script><script id="yui_3_3_0_1_13945877947718" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/node/node-min.js"></script><script id="yui_3_3_0_1_13945877947719" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/event/event-delegate-min.js"></script><script id="yui_3_3_0_2_13945877947712" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/event-custom/event-custom-min.js"></script><script id="yui_3_3_0_2_13945877947713" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/event/event-min.js"></script><script id="yui_3_3_0_2_13945877947714" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/queue-promote/queue-promote-min.js"></script><script id="yui_3_3_0_2_13945877947715" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/datatype/datatype-xml-min.js"></script><script id="yui_3_3_0_2_13945877947716" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/io/io-min.js"></script><script id="yui_3_3_0_2_13945877947717" type="text/javascript" charset="utf-8" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/json/json-parse-min.js"></script><script type="text/javascript" id="seedfile" src="https://s.yimg.com/lq/lib/yui-ssl/3.4.1/build/yui/yui-min.js"></script><script id="yui_3_4_1_1_1394587795329_2" type="text/javascript" src="https://s.yimg.com/lq/combo?yui-ssl/3.4.1/build/oop/oop-min.js&amp;yui-ssl/3.4.1/build/event-custom-base/event-custom-base-min.js&amp;yui-ssl/3.4.1/build/dom-core/dom-core-min.js&amp;yui-ssl/3.4.1/build/dom-base/dom-base-min.js&amp;yui-ssl/3.4.1/build/selector-native/selector-native-min.js&amp;yui-ssl/3.4.1/build/selector/selector-min.js&amp;yui-ssl/3.4.1/build/node-core/node-core-min.js&amp;yui-ssl/3.4.1/build/node-base/node-base-min.js&amp;yui-ssl/3.4.1/build/event-base/event-base-min.js&amp;yui-ssl/3.4.1/build/event-delegate/event-delegate-min.js&amp;yui-ssl/3.4.1/build/node-event-delegate/node-event-delegate-min.js&amp;yui-ssl/3.4.1/build/pluginhost-base/pluginhost-base-min.js&amp;yui-ssl/3.4.1/build/pluginhost-config/pluginhost-config-min.js&amp;yui-ssl/3.4.1/build/node-pluginhost/node-pluginhost-min.js&amp;yui-ssl/3.4.1/build/dom-style/dom-style-min.js&amp;yui-ssl/3.4.1/build/dom-screen/dom-screen-min.js&amp;yui-ssl/3.4.1/build/node-screen/node-screen-min.js&amp;yui-ssl/3.4.1/build/node-style/node-style-min.js&amp;yui-ssl/3.4.1/build/event-custom-complex/event-custom-complex-min.js&amp;yui-ssl/3.4.1/build/event-synthetic/event-synthetic-min.js&amp;yui-ssl/3.4.1/build/event-key/event-key-min.js&amp;yui-ssl/3.4.1/build/event-focus/event-focus-min.js&amp;yui-ssl/3.4.1/build/attribute-base/attribute-base-min.js&amp;yui-ssl/3.4.1/build/attribute-complex/attribute-complex-min.js&amp;yui-ssl/3.4.1/build/base-base/base-base-min.js&amp;yui-ssl/3.4.1/build/plugin/plugin-min.js&amp;yui-ssl/3.4.1/build/event-simulate/event-simulate-min.js&amp;yui-ssl/3.4.1/build/node-event-simulate/node-event-simulate-min.js&amp;yui-ssl/3.4.1/build/node-focusmanager/node-focusmanager-min.js&amp;yui-ssl/3.4.1/build/event-mousewheel/event-mousewheel-min.js&amp;yui-ssl/3.4.1/build/event-mouseenter/event-mouseenter-min.js&amp;yui-ssl/3.4.1/build/event-resize/event-resize-min.js&amp;yui-ssl/3.4.1/build/event-hover/event-hover-min.js&amp;yui-ssl/3.4.1/build/event-outside/event-outside-min.js&amp;yui-ssl/3.4.1/build/querystring-stringify/querystring-stringify-min.js&amp;yui-ssl/3.4.1/build/cookie/cookie-min.js&amp;yui-ssl/3.4.1/build/substitute/substitute-min.js" charset="utf-8"></script><script type="text/javascript" src="https://s.yimg.com/zz/combo?kx/yucs/uh3/uh/js/871/uh-min.js&amp;kx/yucs/uh3/uh/js/102/gallery-jsonp-min.js&amp;kx/yucs/uh3/uh/js/956/menu_utils_v3-min.js&amp;kx/yucs/uh3/uh/js/822/timestamp_library-min.js&amp;kx/yucs/uh3/uh/js/836/logo_debug-min.js&amp;kx/yucs/uh3/profile/js/62/profile-min.js&amp;kx/yucs/uh3/profile/js/68/usermenu_v3-min.js&amp;kx/ucs/common/js/135/jsonp-super-cached-min.js&amp;kx/yucs/uh3/avatar/js/25/avatar-min.js&amp;kx/yucs/uh3/help/js/54/help_menu_v3-min.js"></script><script id="yui_3_4_1_1_1394587795329_3" type="text/javascript" src="https://s.yimg.com/lq/combo?yui-ssl/3.4.1/build/classnamemanager/classnamemanager-min.js&amp;yui-ssl/3.4.1/build/intl/intl-min.js" charset="utf-8"></script><script id="yui_3_4_1_2_1394587795329_80" type="text/javascript" src="https://ucs.query.yahoo.com/v1/console/yql?q=select%20imageUrl%20from%20social.profile.image%20where%20guid%20%3D%20%22MZUGVTOKWJHR4PYR47FN3SNKJU%22%20and%20size%3D%2232x32%22%20and%20imgssl%3D1%3B&amp;format=json&amp;crumb=4SuXrdp4TZf&amp;_maxage=900&amp;callback=YUI.Env.JsonpSuperCached._avatar_callback" charset="utf-8"></script></head>
+<body class="yui-skin-sam">
+<div id="doc" class="yui-t7 ">
+  <div id="bd">
+    <div class="mbr-hd">    <div id="hd">
+    <link type="text/css" rel="stylesheet" href="https://s.yimg.com/zz/combo?kx/yucs/uh3/uh/css/956/uh_non_mail-min.css&amp;kx/yucs/uh3/uh/css/943/uh_ssl-min.css"><!-- intl = us, locale = en-US, spaceid = 150002250 offset = 0 Header 2.0 -->
+<style>#yUnivHead{background:none repeat scroll 0 0 transparent;}</style><style>#yucs{margin:0 auto;width:100% !important}#yucs .yucs-avatar{height:22px;width:22px}#yucs #yucs-profile_text .yuhead-name-greeting{display:none}#yucs #yucs-profile_text .yuhead-name{top:0;max-width:65px;_width:65px}#yucs-profile_text{max-width:65px}.yucs-hide{display:none !important}#yucs #yucs-help_link{font-size:13px;color:#1d1da3;text-shadow:1px 1px 1px #fff;-ms-text-shadow:1px 1px 1px #FFF;text-indent:0;text-decoration:none}#yucs #yucs-help{margin-top:13px;margin-right:10px;*margin-top:19px}#yucs #yucs-help_link:hover{text-decoration:underline}#yucs-profile a#yucs-menu_link_profile{width:100%;_width:100px}#yucs-profile_text{_margin-top:10px}#yucs .yucs-signout{_margin-top:-5px}</style><div id="yucsHead" class="yucs-login yucs-en-us"><div id="yucs" class="yucs-mc " data-lang="en-us" data-property="login" data-flight="1394587794" data-linktarget="_top" data-uhvc="/">        <div class="yucs-fl-left yog-cp">         <div id="yucs-logo">    <style>        #yucs #yucs-logo-ani {          width:120px ;          height:34px;          background-image:url(https://s1.yimg.com/rz/l/yahoo_en-US_f_pw_125x32.png) ;          _background-image:url(https://s1.yimg.com/rz/l/yahoo_en-US_f_pw_125x32.gif) ;          *left: 0px;          display:block ;          visibility:hidden;          clip: rect(22px,154px,42px,0px);         *clip: rect(22px 154px 42px 0px);         position: absolute;        }                .lt #yucs-logo-ani {        background-position: 100% 0px !important;        }                .lt #yucs[data-property='mail'] #yucs-logo-ani {        background-position: -350px 0px !important;        }                #yucs-logo {        margin-top:0px!important;        padding-top: 11px;        width: 120px;        }                #yucs[data-property='homes'] #yucs-logo {            width: 102px;        }                .advisor #yucs-link-ani {            left: 21px !important;        }        .advisor #yucs-search {            padding-left: 34px;        }        #yucs #yucs-logo a {margin-left: 0!important;}#yucs #yucs-link-ani {width: 100% !important;}        @media        only screen and (-webkit-min-device-pixel-ratio: 2),        only screen and ( min--moz-device-pixel-ratio: 2),        only screen and ( -o-min-device-pixel-ratio: 2/1),        only screen and ( min-device-pixel-ratio: 2),        only screen and ( min-resolution: 192dpi),        only screen and ( min-resolution: 2dppx) {         #yucs #yucs-logo-ani  {                background-image: url(https://s1.yimg.com/rz/l/yahoo_en-US_f_pw_125x32_2x.png) !important;                background-size: 240px 34px;            }            }        }    </style>        <div>        <a id="yucs-logo-ani" class="ai-large" href="https://www.yahoo.com" target="_top" data-alg="" style="visibility: hidden; ">          Yahoo        </a>    <a id="yucs-link-ani" style="display: block; position: absolute; height: 58px; top: -12px; left: -17px; width: 154px; " href="https://www.yahoo.com/" target="_top"><span id="animator" style="background-image: url(https://s1.yimg.com/rz/l/logo_siren_large_purple.png); position: relative; display: block; overflow-x: hidden; overflow-y: hidden; width: 200px; height: 54px; left: 0px; background-position: -4000px 0px; background-repeat: no-repeat no-repeat; "></span><b style="position: absolute; text-indent: 20px; width: 10px; overflow-x: hidden; overflow-y: hidden; white-space: nowrap; ">          Yahoo        </b></a></div>     <img id="imageCheck" src="https://s1.yimg.com/os/mit/media/m/base/images/transparent-1093278.png" alt="">    </div><noscript>&lt;style&gt;#yucs #yucs-logo-ani {visibility: visible;position: relative;clip: auto;}&lt;/style&gt;</noscript><script charset="utf-8" type="text/javascript" src="https://s1.yimg.com/zz/combo?kx/yucs/uh3/uh/js/49/ai-ssl-min.js"></script><script>function isIE() {var myNav = navigator.userAgent.toLowerCase();return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;}function loadAnimAfterOnLoad() { if (typeof Aniden != 'undefined'&& Aniden.play&& (document.getElementById('yucs').getAttribute('data-property') !== 'mail' || document.getElementById('yucs-logo-ani').getAttribute('data-alg'))) {Aniden.play();}}if (isIE()) {var _animPltTimer = setTimeout(function() {this.loadAnimAfterOnLoad();}, 6000);} else if((navigator.userAgent.toLowerCase().indexOf('firefox') > -1)) {      var _animFireFoxTimer = setTimeout(function() {            this.loadAnimAfterOnLoad();        }, 2000);}else {document.addEventListener("Aniden.animReadyEvent", function() {loadAnimAfterOnLoad();},true);}</script>     </div><div class="yucs-fl-right">  <div id="yucs-profile" class="yucs-profile yucs-menu_nav">    <a id="yucs-menu_link_profile" class="yucs-submenu-toggle" href="http://profile.yahoo.com/" target="_top" rel="nofollow" aria-label="Profile" role="button">        <span class="yucs-avatar yucs-menu_anchor" data-user="Craig" data-prof="Avatar" data-crumb="4SuXrdp4TZf" data-guid="MZUGVTOKWJHR4PYR47FN3SNKJU"><img width="28" height="28" alt="Craig Avatar" src="https://socialprofiles.zenfs.com/images/c534a8889afc7480c9d1719f13478cec_32.jpeg" class="yucs-avatar"></span><span id="yucs-profile_text"><span class="yuhead-name-greeting yucs-fc">Hi,&nbsp;</span><span class="yuhead-name yucs-fc">Craig</span></span>    </a>    <noscript>&lt;span class="yucs-no_menu"&gt;&lt;a class="yucs-signout" href="https://login.yahoo.com/config/login?logout=1&amp;.direct=2&amp;.done=http://www.yahoo.com&amp;amp;.src=ymbr&amp;amp;.intl=us&amp;amp;.lang=en-US" target="_top" rel="nofollow"&gt;                            Sign Out&lt;/a&gt;&lt;/span&gt;</noscript>    <div id="yucs-profile_inner" class="yucs-hide yucs-menu" data-ylt-profile="/" data-yltmenushown="/" role="menu" tabindex="-1">        <span class="sp yucs-dock"></span>        <ul class="yucs-profile-items-panel" role="presentation">            <li role="presentation"><div class="yucs-signed_in_as" role="presentation">Signed in as:<br><span class="yuhead-yid ellipses">craigleclair4@gma...</span></div></li>            <span class="yucs-separator" role="presentation"></span>            <li role="presentation"><a class="yucs-signout" href="https://login.yahoo.com/config/login?logout=1&amp;.direct=2&amp;.done=http://www.yahoo.com&amp;.src=ymbr&amp;.intl=us&amp;.lang=en-US" target="_top" rel="nofollow" role="menuitemradio" tabindex="0" id="yui_3_4_1_2_1394587795329_54">                            Sign Out</a></li>        </ul>    </div></div>              <div id="yucs-help" class="yucs-activate yucs-help yucs-menu_nav">    <a id="yucs-help_link" href="http://help.yahoo.com/kb/index?locale=en_US&amp;page=product&amp;y=PROD_ACCT" aria-label="Help" rel="nofollow">        Help    </a></div>                              </div>             </div><!-- contextual_shortcuts --><!-- /contextual_shortcuts --><!-- property: login | languagetag: en-us | status: active | spaceid:  | cobrand: standard | markup: empty --><div id="yUnivHead" class="yucs-hide"><!-- empty --></div></div><style>#yuhead-mepanel {width: 150%;}</style>                <script>
+                window.onload = function() {
+                    var seedfile = 'https://s.yimg.com/lq/lib/yui-ssl/3.4.1/build/yui/yui-min.js';
+                    var yui3 = document.createElement('script');
+                    yui3.type = 'text/javascript';
+                    yui3.id="seedfile";
+                    yui3.src = seedfile;
+                    var head = document.getElementsByTagName('head')[0];
+                    head.appendChild(yui3);
+
+                    yui3.onload = function() {
+                        loadUHJS();
+                    }
+                    yui3.onreadystatechange = function() {
+                        if (this.readyState == 'loaded' ||this.readyState == 'complete') {
+                            loadUHJS();
+                        }
+                    }
+
+                    loadUHJS = function() {
+                        YUI({
+                                combine:true,
+                                comboBase: 'https://s.yimg.com/lq/combo?',
+                                root: 'yui-ssl/3.4.1/build/'
+                        }).use('node','node-focusmanager','node', 'event', 'event-custom', 'event-resize','node', 'event', 'querystring-stringify','oop','node','event-custom','cookie','substitute','classnamemanager','querystring-stringify', function(Y) {});
+                        var hdJS= document.createElement('script');
+                        hdJS.type = 'text/javascript';
+                        hdJS.src = 'https://s.yimg.com/zz/combo?kx/yucs/uh3/uh/js/871/uh-min.js&kx/yucs/uh3/uh/js/102/gallery-jsonp-min.js&kx/yucs/uh3/uh/js/956/menu_utils_v3-min.js&kx/yucs/uh3/uh/js/822/timestamp_library-min.js&kx/yucs/uh3/uh/js/836/logo_debug-min.js&kx/yucs/uh3/profile/js/62/profile-min.js&kx/yucs/uh3/profile/js/68/usermenu_v3-min.js&kx/ucs/common/js/135/jsonp-super-cached-min.js&kx/yucs/uh3/avatar/js/25/avatar-min.js&kx/yucs/uh3/help/js/54/help_menu_v3-min.js';
+                        head.appendChild(hdJS);
+                    }
+                };
+                </script>    </div>
+</div>
+<div id="container" class="container">
+<div id="subheader" class="yui-g">
+<h1>Create a Yahoo account</h1>
+<h3>Please select a username and password.</h3> 
+
+</div>
+<div id="formLegend">
+</div>
+<div class="yui-b" id="main-form-body">
+  <form id="upgrade-form" action="/upgrade" method="post">
+    <input type="hidden" name=".scrumb" value="hZJm2N9UzCb">
+    <input type="hidden" name="crumb" value="9BBU6tisMre">
+    <input type="hidden" name="src" value="fantasy">
+    <input type="hidden" name="firstname" value="">
+    <input type="hidden" name="lastname" value="">
+    <input type="hidden" name="done" value="http://hockey.fantasysports.yahoo.com/">
+    <input type="hidden" name="npu" value="1">
+    <input type="hidden" name="uin" id="uin" value="1">
+    <input type="hidden" name="mig" value="yahoo">
+    <input type="hidden" name=".idp" value="google">
+    <input type="hidden" name="mg" value="0">
+
+<!-- Begin If for New Fix -->
+<div id="yid-flow-1" class="hide">
+	<div id="yid-suggested">
+	<div class="s-innerbox">craig.leclair<span>@yahoo.com</span></div>
+	<div class="s-desc"><span><span>This Yahoo username is available.</span> <span>Would you like to use this one?</span></span></div>
+	</div>
+	<div id="yid-confirm">
+	<button id="createcurr" class="confirm-btn-purple">Yes</button>
+	<div><a id="createnew" href="#">Or create new username.</a></div>
+	</div>
+</div>
+<div id="yid-flow-2" class="modern ">
+    	<div id="yid-field-yid" class="">
+	  <div id="yahooIdFld" class="yui-u">
+	    <div id="ymemformfield" class="row input-row">
+	    <div>
+	    	<input id="yahooid" class="" placeholder="Yahoo username" type="text" autocomplete="off" tabindex="9" maxlength="32" size="32" value="craig.leclair" name="yahooid">
+		<div class="row suggestion-row"> <ul class="suggestions hide" id="suggestions" role="menu"></ul></div>
+	    </div>
+	    <div id="sugInput" style="display: none; "><span id="yidHelperBtn" class="yui-button yui-button-button"><span class="first-child"><button type="button">Check</button></span></span></div>
+
+	    <div class="column domain-column">
+		    <span id="domain_" value="yahoo.com" class="domain">@yahoo.com</span>
+		    <input type="hidden" id="domain" name="domain" value="yahoo.com">
+	    </div>
+
+	    <div id="yourNewId">craig.leclair@yahoo.com</div><div id="changeId"><a href="#" id="yidHelperChangeLink" class="activeNavLink">Change</a></div></div>
+	    <p class="validation-message hide" id="user-name-validation-message">This Yahoo! ID is not available</p>
+  	    <div class="hide"><div id="yidHelper" class="yui-module" style="display: none; "></div></div>
+	  </div>
+	</div>
+    <div id="yahooIdFld-msg" class="errorfield hide">
+    </div>
+</div>
+
+
+<div class=" modern yui-gf " id="passwordFld">
+  <div id="passwordFldContainer" class="yui-u">
+    <div id="ymemformfield2" class="password-input-div">
+        <div id="meter_tag" class="yui-u" style="display:none">
+                <h3 id="passwordGuidence">Password Strength</h3>
+                <div class="meter-block" id="meter1" style="background-color: transparent;"></div>
+                <div class="meter-block" id="meter2" style="background-color: transparent;"></div>
+                <div class="meter-block" id="meter3" style="background-color: transparent;"></div>
+                <div class="meter-block" id="meter4" style="background-color: transparent;"></div>
+        </div>
+        <input type="password" placeholder="Password" name="password" id="password" value="" size="32" maxlength="32" class="" style="width:100% !important">
+                        <div class="show-password" id="show-password" style="display: block; ">
+                              <span class="icon-medium unchecked" id="show-password-icon"></span>
+                              <label role="checkbox" aria-checked="false" id="show-password-label">show</label>
+                            </div>
+    </div>
+	<div class="clearall"></div>
+			  <div class="row password-strength" id="password-strength">
+			    <div class="column">Please use:</div>
+			    <div class="column" id="password-length"><span class="icon-small tick-fail"></span><span></span>8 to 32 characters</div>
+			    <div class="column" id="password-contain-mixed-case"><span class="icon-small tick-fail"></span>Upper and lowercase letters</div>
+			    <div class="column" id="password-contain-numbers-special"><span class="icon-small tick-fail"></span>Numbers</div>
+			  </div>
+    <div id="passwordFldMsg" class="errorfield">
+        </div>
+  </div>   
+</div>
+  
+<div class="yui-gf " id="passConfFld" style="display:none">
+ <div class="yui-u first" id="password-conf-label-area">
+    <span class="redCaution">&nbsp;</span>
+    <label id="passconf-label" class="req" for="passwordconfirm">
+        Retype Password    </label>
+  </div>
+  <div id="passConfFldContainer" class="yui-u">
+  <div id="passConfFldMsg">
+        </div>
+    <div id="ymemformfield3">
+        <input type="password" placeholder="Confirm Password" name="passwordconfirm" id="passwordconfirm" value="" size="32" maxlength="32" class="">
+    </div>
+  </div>
+</div>
+<!-- End of Else block -->
+<div class="yui-gf modern " id="Agreement">
+  <div id="agreementButton" class="yui-u first">
+    <p id="disclaimer">I agree to the <a href="http://info.yahoo.com/legal/us/yahoo/mail/en-us/" target="_blank">Yahoo Terms</a> and <a href="http://info.yahoo.com/privacy/us/yahoo/" target="_blank">Privacy</a>.</p>
+        <input type="submit" name="IAgreeBtn" class="confirm-btn-purple" id="IAgreeBtnNew" value="Continue" title="Continue">
+  </div>
+</div>
+  </form>
+</div>
+</div>
+    <div id="ft">
+        <!-- intl = us, spaceid = 150002250 offset = 0 position = FOOT -->
+<!-- APT Vendor: Yahoo, Format: Standard Graphical -->
+<center><font size="-2" face="Arial, Helvetica">Copyright © 2014 Yahoo! Inc. All rights reserved. <a href="https://clicks.beap.bc.yahoo.com/yc/YnY9MS4wLjAmYnM9KDE3bGJpMGthMShnaWQkbUVQMDZESXdOaTZKYVhROVV4LjRqZ0ZyTnpBdU0xTWZ1Skxfb2JWbyxzdCQxMzk0NTg3Nzk0NjQwNjM1LHNpJDQ0NjU1NTEsc3AkMTUwMDAyMjUwLGNyJDMyNjQ1MzY1NTEsdiQyLjAsYWlkJHlwTjl1bUtMYzBNLSxjdCQyNSx5YngkcENxQVFpb0E0WjdsYmV2RG9UUGhOQSxiaSQxNjkwNjExNTUxLG1tZSQ3MDk5NjI4NDA0Mzc1ODg0MTE1LHIkMCxyZCQxMWpuOTI3MTYseW9vJDEsYWdwJDI0NTM3NzYwNTEsYXAkRk9PVEMpKQ/2/*http://docs.yahoo.com/info/copyright/copyright.html">Copyright/IP Policy</a> - <a href="https://clicks.beap.bc.yahoo.com/yc/YnY9MS4wLjAmYnM9KDE3bG1xNmFuYyhnaWQkbUVQMDZESXdOaTZKYVhROVV4LjRqZ0ZyTnpBdU0xTWZ1Skxfb2JWbyxzdCQxMzk0NTg3Nzk0NjQwNjM1LHNpJDQ0NjU1NTEsc3AkMTUwMDAyMjUwLGNyJDMyNjQ1MzY1NTEsdiQyLjAsYWlkJHlwTjl1bUtMYzBNLSxjdCQyNSx5YngkcENxQVFpb0E0WjdsYmV2RG9UUGhOQSxiaSQxNjkwNjExNTUxLG1tZSQ3MDk5NjI4NDA0Mzc1ODg0MTE1LHIkMSxyZCQxMTE4cHI0dDgseW9vJDEsYWdwJDI0NTM3NzYwNTEsYXAkRk9PVEMpKQ/2/*http://docs.yahoo.com/info/terms/">Terms of Service</a> - <a href="https://clicks.beap.bc.yahoo.com/yc/YnY9MS4wLjAmYnM9KDE3bGUxbTQ3MihnaWQkbUVQMDZESXdOaTZKYVhROVV4LjRqZ0ZyTnpBdU0xTWZ1Skxfb2JWbyxzdCQxMzk0NTg3Nzk0NjQwNjM1LHNpJDQ0NjU1NTEsc3AkMTUwMDAyMjUwLGNyJDMyNjQ1MzY1NTEsdiQyLjAsYWlkJHlwTjl1bUtMYzBNLSxjdCQyNSx5YngkcENxQVFpb0E0WjdsYmV2RG9UUGhOQSxiaSQxNjkwNjExNTUxLG1tZSQ3MDk5NjI4NDA0Mzc1ODg0MTE1LHIkMixyZCQxMXNkZGZldDQseW9vJDEsYWdwJDI0NTM3NzYwNTEsYXAkRk9PVEMpKQ/2/*http://help.yahoo.com/l/us/yahoo/edit/id_password/index.html">Help</a><br>NOTICE: We collect personal information on this site. To learn more about how we use your information, see our <a class="uline" target="_top" href="https://clicks.beap.bc.yahoo.com/yc/YnY9MS4wLjAmYnM9KDE3bDJhOW9vYihnaWQkbUVQMDZESXdOaTZKYVhROVV4LjRqZ0ZyTnpBdU0xTWZ1Skxfb2JWbyxzdCQxMzk0NTg3Nzk0NjQwNjM1LHNpJDQ0NjU1NTEsc3AkMTUwMDAyMjUwLGNyJDMyNjQ1MzY1NTEsdiQyLjAsYWlkJHlwTjl1bUtMYzBNLSxjdCQyNSx5YngkcENxQVFpb0E0WjdsYmV2RG9UUGhOQSxiaSQxNjkwNjExNTUxLG1tZSQ3MDk5NjI4NDA0Mzc1ODg0MTE1LHIkMyxyZCQxMTRnMTZjZmoseW9vJDEsYWdwJDI0NTM3NzYwNTEsYXAkRk9PVEMpKQ/2/*http://privacy.yahoo.com/privacy/us/">Privacy Policy</a> - <a href="https://clicks.beap.bc.yahoo.com/yc/YnY9MS4wLjAmYnM9KDE3bDd2aHRkZyhnaWQkbUVQMDZESXdOaTZKYVhROVV4LjRqZ0ZyTnpBdU0xTWZ1Skxfb2JWbyxzdCQxMzk0NTg3Nzk0NjQwNjM1LHNpJDQ0NjU1NTEsc3AkMTUwMDAyMjUwLGNyJDMyNjQ1MzY1NTEsdiQyLjAsYWlkJHlwTjl1bUtMYzBNLSxjdCQyNSx5YngkcENxQVFpb0E0WjdsYmV2RG9UUGhOQSxiaSQxNjkwNjExNTUxLG1tZSQ3MDk5NjI4NDA0Mzc1ODg0MTE1LHIkNCxyZCQxMTJzajdhc2cseW9vJDEsYWdwJDI0NTM3NzYwNTEsYXAkRk9PVEMpKQ/2/*http://info.yahoo.com/relevantads/">About Our Ads</a>.</font></center><!--QYZ 1690611551,3264536551,98.139.115.87;;FOOTC;150002250;1;--><script language="javascript">
+if(window.xzq_d==null)window.xzq_d=new Object();
+window.xzq_d['ypN9umKLc0M-']='(as$12refml12,aid$ypN9umKLc0M-,bi$1690611551,cr$3264536551,ct$25,at$H,eob$gd1_match_id=-1:ypos=PP.FOOT-FOOTC)';
+</script><noscript>&lt;img width=1 height=1 alt="" src="https://csc.beap.bc.yahoo.com/yi?bv=1.0.0&amp;bs=(135dso7om(gid$mEP06DIwNi6JaXQ9Ux.4jgFrNzAuM1MfuJL_obVo,st$1394587794640635,si$4465551,sp$150002250,pv$1,v$2.0))&amp;t=J_3-D_3&amp;al=(as$12refml12,aid$ypN9umKLc0M-,bi$1690611551,cr$3264536551,ct$25,at$H,eob$gd1_match_id=-1:ypos=PP.FOOT-FOOTC)"&gt;</noscript><!-- SpaceID=150002250 loc=FSRVY noad --><!-- fac-gd2-noad --><!-- gd2-status-2 --><!--QYZ CMS_NONE_SELECTED,,98.139.115.87;;FSRVY;150002250;2;--><script language="javascript">
+if(window.xzq_d==null)window.xzq_d=new Object();
+window.xzq_d['A5x9umKLc0M-']='(as$125d9pl1e,aid$A5x9umKLc0M-,cr$-1,ct$25,at$H,eob$gd1_match_id=-1:ypos=FSRVY)';
+</script><noscript>&lt;img width=1 height=1 alt="" src="https://csc.beap.bc.yahoo.com/yi?bv=1.0.0&amp;bs=(135dso7om(gid$mEP06DIwNi6JaXQ9Ux.4jgFrNzAuM1MfuJL_obVo,st$1394587794640635,si$4465551,sp$150002250,pv$1,v$2.0))&amp;t=J_3-D_3&amp;al=(as$125d9pl1e,aid$A5x9umKLc0M-,cr$-1,ct$25,at$H,eob$gd1_match_id=-1:ypos=FSRVY)"&gt;</noscript><!-- SpaceID=150002250 loc=SIP noad --><!-- fac-gd2-noad --><!-- gd2-status-2 --><!--QYZ CMS_NONE_AVAIL,,98.139.115.87;;SIP;150002250;2;--><script language="javascript">
+if(window.xzq_d==null)window.xzq_d=new Object();
+window.xzq_d['PKR9umKLc0M-']='(as$1250llvtk,aid$PKR9umKLc0M-,cr$-1,ct$25,at$H,eob$gd1_match_id=-1:ypos=SIP)';
+</script><noscript>&lt;img width=1 height=1 alt="" src="https://csc.beap.bc.yahoo.com/yi?bv=1.0.0&amp;bs=(135dso7om(gid$mEP06DIwNi6JaXQ9Ux.4jgFrNzAuM1MfuJL_obVo,st$1394587794640635,si$4465551,sp$150002250,pv$1,v$2.0))&amp;t=J_3-D_3&amp;al=(as$1250llvtk,aid$PKR9umKLc0M-,cr$-1,ct$25,at$H,eob$gd1_match_id=-1:ypos=SIP)"&gt;</noscript><!-- SpaceID=150002250 loc=FOOT2 noad --><!-- fac-gd2-noad --><!-- gd2-status-2 --><!--QYZ CMS_NONE_AVAIL,,98.139.115.87;;FOOT2;150002250;2;--><script language="javascript">
+if(window.xzq_d==null)window.xzq_d=new Object();
+window.xzq_d['dax9umKLc0M-']='(as$125jad7o0,aid$dax9umKLc0M-,cr$-1,ct$25,at$H,eob$gd1_match_id=-1:ypos=FOOT2)';
+</script><noscript>&lt;img width=1 height=1 alt="" src="https://csc.beap.bc.yahoo.com/yi?bv=1.0.0&amp;bs=(135dso7om(gid$mEP06DIwNi6JaXQ9Ux.4jgFrNzAuM1MfuJL_obVo,st$1394587794640635,si$4465551,sp$150002250,pv$1,v$2.0))&amp;t=J_3-D_3&amp;al=(as$125jad7o0,aid$dax9umKLc0M-,cr$-1,ct$25,at$H,eob$gd1_match_id=-1:ypos=FOOT2)"&gt;</noscript></div>
+</div>
+<div class="mbr-page-fade"></div>
+<div class="mbr-page-fade-content">
+<div class="mbr-page-fade-hd">You now need a Yahoo account to continue your experience.</div>
+<div class="mbr-page-fade-bd">Don’t worry, you’ll still have access to your account info.</div>
+<button id="olclose" class="confirm-btn-purple">OK</button>
+</div>
+<script type="text/javascript" src="https://s.yimg.com/lq/lib/membership/ns/js/mmu.js"></script>
+<script type="text/javascript" src="https://s.yimg.com/zz/combo?yui:3.3.0/build/yui/yui-min.js&amp;/ss/rapid-3.12.1.js"></script>
+<script type="text/javascript">
+
+	function mailUpgradeNamespace() {
+	  strings = { change : "Change"};
+
+	  has_valid_yid = false;
+	  has_valid_passwords = false;
+
+	  var yahooidfld = {
+	    empty : "This information is required",
+	    invalidchars : "Only letters, numbers, underscores, and a single dot (.) are allowed",
+	    invalidfirstchar : "Your Yahoo! ID must begin with a letter",
+	    notlongenough : "Your Yahoo! ID must be between 4 and 32 characters long",
+	    idnotavail : "This Yahoo! ID is not available",
+	    noidsavailable : "Sorry, no Yahoo! ID suggestions are available",
+	    dotunderscore : "Your Yahoo! ID may not have an adjacent . and _",
+	    consecutivechars : "No consecutive underscores or dots allowed",
+	    invalidending : "Your Yahoo! ID may not end with an underscore or dot (.)"
+	  };
+       	  var existing_Ids = ""; 
+          var prefix = "craig.leclair";
+          if(prefix != ""){
+            existing_Ids = prefix + "@" + YAHOO.util.Dom.get("domain").value;
+          }
+
+	  var yid_validators = {
+	    empty :
+	    function(fieldEl){
+	      return (fieldEl !== "");
+	    },
+	    invalidchars : 
+	    function(fieldEl){
+	      var pattern = /[^a-z0-9._]|\..*\./i;
+	      return (fieldEl.match(pattern) === null);
+	    },
+	    notlongenough : 
+	    function(fieldEl){
+	      return (fieldEl.length >= 4 && fieldEl.length <= 32);
+	    },
+	    invalidfirstchar : 
+	    function(fieldEl){
+	      var pattern = /^[^a-z]/i;
+	      return (fieldEl.charAt(0).match(pattern) === null);
+	    },
+	    dotunderscore : 
+	    function(fieldEl){
+	      var pattern = /\._|_\./;
+	      return (fieldEl.match(pattern) === null);
+	    },				
+	    consecutivechars : 
+	    function(fieldEl){
+	      return (fieldEl.indexOf("..") === -1 && fieldEl.indexOf("__") === -1);
+	    },				
+	    invalidending : 
+	    function(fieldEl){
+	      var pattern = /[._]$/;
+	      return (fieldEl.match(pattern) === null);
+	    }
+	  };
+
+          var passwordFld = YAHOO.util.Dom.get("passwordFld");
+          passwordConfFld = YAHOO.util.Dom.get("passConfFld");
+          pwdDiv = YAHOO.util.Dom.get("passwordFldMsg");
+          pwdConfDiv = YAHOO.util.Dom.get("passConfFldMsg");
+	  yid_input = YAHOO.util.Dom.get("yahooid");
+	  yid_field = YAHOO.util.Dom.get("yid-field");
+	  upgrade_form = YAHOO.util.Dom.get("upgrade-form");
+	  domain_input = YAHOO.util.Dom.get("domain");
+	  yahoo_domain_suggs_list = YAHOO.util.Dom.get("yahoo-domain-suggs");
+	  dbid_suggs_list = YAHOO.util.Dom.get("dbid-suggs");
+	  yahoo_domain_suggs_hd  = YAHOO.util.Dom.get("yahoo-domain-suggs-hd");
+	  dbid_suggs_hd = YAHOO.util.Dom.get("dbid-suggs-hd");
+	  existing_ids_list = YAHOO.util.Dom.get("existing-ids");
+	  msgDiv = YAHOO.util.Dom.get("yahooIdFld-msg");
+
+	  function checkYid(box, error_field) {
+	    var yid = yid_input.value;
+	    var domain = domain_input.value;
+
+	    var errorStr = "";
+	    var hasError = false;
+
+	    if (existing_Ids == yid+'@'+domain) {
+		has_valid_yid = true;
+		setYidChosenState(existing_Ids, yid_field);
+		return true;
+	    }
+
+	    for (var property in yahooidfld) {
+	      validator = yid_validators[property];
+	      if (validator != null && validator(yid) === false) {
+		hasError = true;
+		errorStr = yahooidfld[property];
+	      }
+	    }
+	   	    
+	    if (!hasError) {
+	      remoteValidate(yid+"@"+domain);
+	      has_valid_yid = true;
+	    }
+	    else {
+	      YAHOO.util.Dom.addClass(error_field,"error");
+	      msgDiv.innerHTML = errorStr;
+	      has_valid_yid = false;
+	    }
+	  }
+
+	  function createHelperBtn() {
+	    var check_button = new YAHOO.widget.Button({ 
+	                                            id: "yidHelperBtn",
+	                                            type: "button",
+	                                            label: "Check",  
+	                                            container: "sugInput"  
+							  });
+	    check_button.addListener("click", checkYid, yid_field);
+	  }
+
+	  function setYidChosenState(yid, error_field){
+         if( (typeof error_field) != undefined && error_field != null){
+              YAHOO.util.Dom.removeClass(error_field,"error");
+              msgDiv.innerHTML = "";
+          }
+	    //replace the form field that contains the yid with a div
+	    var yahooIdFldFormFld = YAHOO.util.Dom.get('ymemformfield');
+
+	    var newId = YAHOO.util.Dom.get('yourNewId');
+	    var newIdDivOnPage = newId != null ? true : false; //check to see if the new id div is already exists
+	    if(!newIdDivOnPage){
+	      switchYidDisplay(YAHOO.util.Dom.get('sugInput'), yahooIdFldFormFld, 'div', yid);
+	      addReversionLinks();
+	    }
+	    var yidHelper = new YAHOO.widget.Module("yidHelper");
+	    yidHelper.hide();
+
+	    // set the appropriate input fields
+	    var id_and_domain = yid.split("@");
+	    yid_input.value = id_and_domain[0];
+	    domain_input.value = id_and_domain[1];
+
+	    // set yid to valid
+	    has_valid_yid = true;
+	  };
+
+	  function switchYidDisplay(el, parentEl, switchTo, yid){
+	    switch(switchTo){
+	    case "div":
+	      var idDiv, changeDiv, changeLink;
+	      if(parentEl != null && el != null){
+		switchElementDisplay(el, false);
+		idDiv = document.createElement("div");
+		idDiv.appendChild(document.createTextNode(yid));
+		idDiv.id = "yourNewId";
+		parentEl.appendChild(idDiv);
+		changeDiv = document.createElement("div");
+		changeDiv.id = "changeId";
+		parentEl.appendChild(changeDiv);
+	      }
+	      break;
+	    case "textinput":
+	      var newIdDiv = YAHOO.util.Dom.get("yourNewId");
+	      var changeIdDiv = YAHOO.util.Dom.get("changeId");
+	      document.getElementById("yahooid").value ="";
+	      var sugInput = YAHOO.util.Dom.get("sugInput");
+	      if(newIdDiv != null && changeIdDiv != null){
+		newIdDiv.parentNode.removeChild(newIdDiv);
+		changeIdDiv.parentNode.removeChild(changeIdDiv);
+		switchElementDisplay(sugInput, true);
+	      }
+	      
+	      break;
+	    }
+	  };
+
+	  function addReversionLinks(){
+
+	    var changeIdLinkA = document.createElement("a");;
+	    changeIdLinkA.setAttribute("href","#");
+	    changeIdLinkA.setAttribute("id","yidHelperChangeLink");
+	    changeIdLinkA.innerHTML = strings.change;
+	    YAHOO.util.Dom.addClass(changeIdLinkA,"activeNavLink");
+	    YAHOO.util.Event.addListener(changeIdLinkA, "click", enableYidEdit);
+	    
+	    var changeIdLinkContainer = YAHOO.util.Dom.get("changeId");
+	    if(changeIdLinkContainer != null){
+	      changeIdLinkContainer.appendChild(changeIdLinkA);
+	    }
+	  };
+
+	  function enableYidEdit(obj) {
+	    //show input display again
+	    switchYidDisplay(null, null, 'textinput');
+
+	    //unhide helper module
+	    var yidHelper = new YAHOO.widget.Module("yidHelper");
+	    yidHelper.show();
+	  }
+
+          function switchElementDisplay(elRef, visible){
+	    if(elRef){
+	      if(visible){
+		YAHOO.util.Dom.setStyle(elRef, "display", "block");
+	      }else{
+		YAHOO.util.Dom.setStyle(elRef,"display", "none");
+	      }
+	    }
+	  };
+
+	  function makeSuggId(box, error_field) {
+	    var email = this.title;
+	    setYidChosenState(email, error_field);
+	  }
+
+	  function addSuggestionListeners(ordered_list_elem) {
+	    if (null !== ordered_list_elem) {
+	      var children = YAHOO.util.Dom.getChildren(ordered_list_elem);
+	      for (var i = 0; i < children.length; i++) {
+		var list_item = children[i];
+		var suggestion = YAHOO.util.Dom.getChildren(list_item)[1];
+		YAHOO.util.Event.addListener(suggestion, "click", makeSuggId, yid_field);
+	      }
+	    }
+	  }
+
+	  function createSuggsElement(sugg) {
+	    var listElm = document.createElement("li");
+	    var suggElm = document.createElement("a");
+	    suggElm.setAttribute("href","#");
+	    suggElm.setAttribute("title",sugg);
+	    suggElm.innerHTML = sugg;
+	    YAHOO.util.Event.addListener(suggElm, "click", makeSuggId, yid_field);
+	    listElm.appendChild(suggElm);
+	    return listElm;
+	  }
+
+	  function reviseSuggestions(ordered_list_elem, new_suggs_list, header_elm) {
+	    var children = YAHOO.util.Dom.getChildren(ordered_list_elem);
+	    for (var i = 0; i < children.length; i++) {
+	      ordered_list_elem.removeChild(children[i]);
+	    }
+
+	    if (null == new_suggs_list || 
+		0 == new_suggs_list.length) {
+	      YAHOO.util.Dom.setStyle( header_elm, "display", "none");
+	    }
+	    else {
+	      YAHOO.util.Dom.setStyle( header_elm, "display", "");
+	    }
+
+	    var i;
+	    for (i in new_suggs_list) {
+	      var newElm = createSuggsElement(new_suggs_list[i]);
+	      ordered_list_elem.appendChild(newElm);
+	    }
+	    
+	  }
+
+	  function successCallback(o) {
+	    try {
+	      var response = eval( "("+o.responseText+")");
+	      if (response.ResultCode == "PERMANENT_FAILURE") {
+		YAHOO.util.Dom.addClass(yid_field,"error");
+		var yid_fld = YAHOO.util.Dom.get("yahooIdFld");
+		errorStr = yahooidfld["idnotavail"];
+		msgDiv.innerHTML = errorStr;
+		new_yid_list = response.SuggestedIdList;
+		new_dbid_list = response.SuggestedDbidList;
+          	domain_hd = document.getElementById("domain-hd");
+          	if( (typeof domain_hd) != undefined && domain_hd != null){
+               		var domainEl = document.getElementById("domain");
+               		document.getElementById("domain-hd").innerHTML = "@"+domainEl.options[domainEl.selectedIndex].value;
+          	}
+			reviseSuggestions(yahoo_domain_suggs_list,
+				  new_yid_list,
+				  yahoo_domain_suggs_hd);
+		// set yid to not valid
+		has_valid_yid = false;
+	      }
+	      else if (response.ResultCode == "SUCCESS") {
+		setYidChosenState(o.argument.yid, yid_field);
+		has_valid_yid = true;
+	      }
+	    }
+	    catch(ex) {}
+	  }
+
+	  function failureCallback(o) {
+	    has_valid_yid = true;
+	  }
+
+	  var callback = { success : successCallback,
+			   failure : failureCallback,
+			   argument : []
+	  };
+
+	  function remoteValidate(yid) {
+	    callback.argument = { yid : yid_input.value+"@"+domain_input.value };
+	    YAHOO.util.Connect.asyncRequest('GET','/upgrade_json?yid='+yid, callback, null);
+	  }
+
+          onsubmitHandler = function (e) {
+		// Put in Password validator here   
+		var pwd1 = YAHOO.util.Dom.get("password").value;
+		var pwd2 = YAHOO.util.Dom.get("passwordconfirm").value;
+		if ((pwd1 === pwd2) && pwd1.length > 6) { has_valid_passwords = true; }
+            	if (false === has_valid_yid ||
+		    false === has_valid_passwords) {
+            		YAHOO.util.Event.stopEvent(e);
+
+                  	if (false === has_valid_passwords) {
+				if (pwd1.length == 0) {
+                    			YAHOO.util.Dom.addClass(passwordFld,"error");
+                    			pwdDiv.innerHTML = yahooidfld["empty"];
+				} else {
+					if (pwd2.length == 0) {
+                    				YAHOO.util.Dom.addClass(passwordConfFld,"error");
+                    				pwdConfDiv.innerHTML = yahooidfld["empty"];
+					}
+				}
+			}
+
+                	return false;
+          	} 
+                yid_input.disabled = false;
+                rapid.beaconEvent('continue', {'action' : 'continue'});
+  
+                return true;
+          }
+
+          this.init = function() {
+            	YAHOO.util.Event.addListener(domain_input, "change", checkYid, yid_field);
+            	YAHOO.util.Event.addListener(upgrade_form, "submit", onsubmitHandler);
+
+	    	createHelperBtn();
+         
+		if(existing_Ids != null && existing_Ids != ""){
+              		setYidChosenState(existing_Ids);
+         	}else{
+               		document.getElementById("sugInput").style.display = "block";              
+               		document.getElementById("yidHelper").style.display = "block";              
+         	}
+	    	// create yui skinned button elements
+	    	//agreeBtn = new YAHOO.widget.Button("IAgreeBtn");
+	    	dontAgreeBtn = new YAHOO.widget.Button("IDontAgreeBtn");
+
+	    	// add suggestion events
+	    	addSuggestionListeners(yahoo_domain_suggs_list);
+	    	addSuggestionListeners(dbid_suggs_list);
+	    	addSuggestionListeners(existing_ids_list);
+	  }
+
+	}
+
+var dummy = new mailUpgradeNamespace();
+dummy.init();
+
+</script>
+<script language="javascript" type="text/javascript">	
+
+var errorMessageTable = {
+	"USERINPUTISEMPTY":"This information is required",
+	"PWDCONTAINSYID" :"Your password cannot include your Yahoo! ID", 
+	"PWDCONTAINSFNAME" :"Your password cannot include any part of your name",  
+	"PWDCONTAINSLNAME" :"Your password cannot include any part of your name",
+	"PWDNOTLONGENOUGH":"Your Password must be 6 to 32 characters long",
+	"PWDCONTAINSPWDWORD":"Your password cannot include the word ‘password’",
+	"PWDNOTMATCH":"The passwords you entered do not match.  Please try again."
+};
+
+var localizedStrings = {
+     "password_tooshort":"Too Short",
+     "password_mediocre":"Weak",
+     "password_strong":"Strong",
+     "password_strongest":"Very Strong",
+     "invalidpwdmessage": "Invalid Password",
+     "password_initialState":"Password Strength"
+};
+
+var infoMessages = {
+};
+
+
+var pageConfig = {
+};
+
+
+function getScript(){
+
+     setTimeout(function() {
+          var jsScriptEl = document.createElement("script");
+          jsScriptEl.type = "text/javascript";
+          jsScriptEl.src ="https://s.yimg.com/lq/combo?membership/build/util/yahoo/205615.js&membership/build/util/leandom/211478.js&membership/build/util/leanevent/205615.js&membership/build/util/base/202927.js&membership/build/validation/base/204516.js&membership/build/validation/password/226163.js&membership/build/validation/pwdmeter/204709.js&membership/build/app/openidapp/225780.js";
+          document.body.appendChild(jsScriptEl);
+
+      },10);
+}
+
+
+    if (window.addEventListener) {
+        window.addEventListener("load", getScript,false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", getScript);
+    } else {
+		// Netscape 4
+		if ( window["onload"] ) {
+			// Do nothing - we don't want to overwrite an existing handler.
+		} else {
+        	window["onload"] = getScript;
+		}
+    }
+
+//New js for Pssword Strength Features
+setTimeout(function() {
+YUI().use('node', function(Y) {
+// Demo Purposes
+        Y.on("click", function(e) {
+              e.preventDefault();
+                  alert('event: ' + e.type + ' target: ' + e.target.get('tagName')); 
+        }, "#demo");
+
+// Confirm Password Hidden Field
+
+        var confirmPassword = Y.one('#passwordconfirm');
+
+        if(confirmPassword){
+          Y.on('keyup', function(){
+            confirmPassword.set('value', this.get('value'));
+          }, '#password');
+        }
+
+// Password Strength
+var passwordStrengthContainer = Y.one('#password-strength'),
+
+    passwordLengthIcon = Y.one('#password-length span'),
+    passwordLengthText = Y.one('#password-length'),
+
+    passwordContainsMixedCaseIcon = Y.one('#password-contain-mixed-case span'),
+    passwordContainsMixedCaseText = Y.one('#password-contain-mixed-case'),
+
+    passwordContainsNumberSpecialIcon = Y.one('#password-contain-numbers-special span'),
+    passwordContainsNumberSpecialText = Y.one('#password-contain-numbers-special'),
+
+    showHidepasswordStrengthContainer, updatePasswordStrength;
+
+  if(passwordStrengthContainer) {
+    showHidepasswordStrengthContainer = function(e, display) {
+      passwordStrengthContainer.setStyle('display', display);
+    };
+    Y.on('focus', showHidepasswordStrengthContainer, '#password', null, 'block');
+
+    Y.on('blur', showHidepasswordStrengthContainer, '#password', null, 'none');
+  }
+
+  if(passwordLengthIcon && passwordLengthText &&
+    passwordContainsMixedCaseIcon && passwordContainsMixedCaseText &&
+    passwordContainsNumberSpecialIcon && passwordContainsNumberSpecialText) {
+
+    updatePasswordStrength = function (passwordStrengthIcon, passwordStrengthText, status) {
+      if(status) {
+        if(passwordStrengthIcon.hasClass('tick-fail')) {
+          passwordStrengthIcon.removeClass('tick-fail');
+          passwordStrengthIcon.addClass('tick-pass');
+          passwordStrengthText.setStyle('color', 'black');
+        }
+      } else {
+        if(passwordStrengthIcon.hasClass('tick-pass')) {
+          passwordStrengthIcon.removeClass('tick-pass');
+          passwordStrengthIcon.addClass('tick-fail');
+          passwordStrengthText.setStyle('color', '#a5a5a5');
+        }
+      }
+    };
+
+    Y.on('keyup', function(e){
+      var password = this.get('value'),
+      passwordLengthStatus,
+      passwordContainsMixedCaseStatus,
+      passwordContainsNumberSpecialStatus;
+
+      passwordLengthStatus = password.length > 7 ? true : false;
+      updatePasswordStrength(passwordLengthIcon, passwordLengthText, passwordLengthStatus);
+
+      passwordContainsMixedCaseStatus = password.match(/[a-z]+/) && password.match(/[A-Z]+/) ? true : false;
+      updatePasswordStrength(passwordContainsMixedCaseIcon, passwordContainsMixedCaseText, passwordContainsMixedCaseStatus);
+
+      passwordContainsNumberSpecialStatus = password.match(/\d/) ? true : false;
+      updatePasswordStrength(passwordContainsNumberSpecialIcon, passwordContainsNumberSpecialText, passwordContainsNumberSpecialStatus);
+
+    }, '#password');
+  }
+
+// Show Password
+
+var showPassword = Y.one('#show-password'),
+      password = Y.one('#password'),
+      showPasswordIcon = Y.one('#show-password-icon'),
+      showPasswordLabel = Y.one('#show-password-label'),
+      togglePasswordMask;
+
+    togglePasswordMask = function(e) {
+      e.halt();
+      if(password.get('type') === 'password') {
+        password.set('type', 'text');
+        showPasswordIcon.addClass('checked');
+        showPasswordIcon.removeClass('unchecked');
+        showPasswordLabel.setAttribute('aria-checked', 'true');
+      } else {
+        password.set('type', 'password');
+        showPasswordIcon.addClass('unchecked');
+        showPasswordIcon.removeClass('checked');
+        showPasswordLabel.setAttribute('aria-checked', 'false');
+      }
+    };
+
+    if(showPassword){
+      if ( Y.UA.ie == 0 || Y.UA.ie > 8)
+        showPassword.setStyle('display', 'block');
+    }
+
+    Y.on('mousedown', togglePasswordMask, '#show-password');
+});
+
+YUI().use('node', 'event','io','json-parse', function (Y) {
+	var localizedStrings = {
+     		"create_password":"Create a password.",
+     		"enter_username":"Enter your new username and password.",
+		"idnotavail": "This Yahoo! ID is not available",
+		"idempty": "This information is required"
+	};
+
+	Y.on('click', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		Y.all('.mbr-page-fade,.mbr-page-fade-content').addClass('hide');
+        rapid.beaconEvent('closepopup', {'action' : 'close_popup'});
+	}, '#olclose');
+	Y.on('click', function(e) { 
+		e.stopPropagation();
+		e.preventDefault();
+        return;
+		var title = Y.one('#subheader').one('h3'), 
+		    yahooid = Y.one('#yahooid');
+		Y.one('#yid-flow-1').addClass('hide');
+		title.set('innerHTML', localizedStrings.create_password);
+		Y.all('.modern').removeClass('hide');
+		yahooid.set('value', 'craig.leclair');
+		yahooid.set('disabled', true);
+		has_valid_yid = true;
+		Y.one('#uin').set('value', '0');
+	},'#createcurr');
+	Y.on('click', function(e) { 
+		e.stopPropagation();
+		e.preventDefault();
+        return;
+		var title = Y.one('#subheader').one('h3'), 
+		    yahooid = Y.one('#yahooid');
+
+		Y.one('#yid-flow-1').addClass('hide');
+		title.set('innerHTML', localizedStrings.enter_username);
+		Y.all('.modern').removeClass('hide');
+		Y.one('#uin').set('value', '1');
+	}, '#createnew');
+
+	var toggleYidError = function(tog, msg) {
+		var errMsg = Y.one('#user-name-validation-message'), 
+		    yidField = Y.one('#yid-field-yid');
+		if ( tog === 'show') {
+			if (typeof msg === 'undefined') {
+				msg = localizedStrings.idnotavail;
+			}
+			errMsg.set('innerHTML', msg);
+			errMsg.removeClass('hide');
+			yidField.addClass('error');
+			has_valid_yid = false;
+		}
+		else {
+			errMsg.addClass('hide');
+			yidField.removeClass('error');
+			has_valid_yid = true;
+		}
+	}
+
+	var suggestedList = {};
+    var sel = -1;
+	var getAccountSuggestion = function(yidVal) {
+		var domainVal = Y.one('input[name=domain]').get('value'), 
+		    fnameVal = '', 
+		    lnameVal = '', 
+		    intl = 'us', 
+		    rand = Math.ceil(Math.random() * 10000000); 
+		    u = 'r09.member.gq1.yahoo.com', 
+		    t = '',
+		    uri = "/reg_json?PartnerName=yahoo_default&RequestVersion=1&GivenName=" + fnameVal + "&FamilyName=" + lnameVal + "&ApiName=ValidateFields&" + "intl=" + intl + "&" + rand + "&u=" + u + "&t=" + t;
+		    uri = uri + '&AccountID=' + yidVal + '@' + domainVal;
+
+		    if (typeof suggestedList[yidVal] !== 'undefined') {
+			if (suggestedList[yidVal] === "AVAILABLE") {
+				toggleYidError('hide');
+			} else {
+				toggleYidError('show');
+			}
+			return;
+		    }
+
+		    var parseSuggestionData = function(data) {
+			if (data.ResultCode === 'SUCCESS') {
+				toggleYidError('hide');
+				suggestedList[yidVal] = "AVAILABLE";
+			} else {
+				toggleYidError('show');
+				if (data.SuggestedIDList) {
+					suggestedList[yidVal] = data.SuggestedIDList;
+				}
+			}
+		    };
+		    var callback = function(tid, response, arguments) {
+			    try {
+				    var result = response.responseText;
+				    if (typeof result != 'undefined') {
+					var jsonResult = Y.JSON.parse(result);
+					parseSuggestionData(jsonResult);
+				    }
+				    else {
+					// result error
+				    }
+			    } catch(error) {
+				// XHR ERROR
+			    }
+		    };
+		    var tCfg = {
+			method: 'GET',
+			on: {complete: callback}
+		    };
+		    Y.io(uri, tCfg);
+	};
+
+	Y.on('blur', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+		setTimeout(function() {
+			var s_box = Y.one('#suggestions');
+			s_box.addClass('hide');
+            sel = -1;
+		}, 200);
+
+		var yidVal = Y.one('#yahooid').get('value');
+		if (yidVal !== '') {
+			toggleYidError('hide');
+			if(suggestedList[yidVal] === 'AVAILABLE') {
+			} else {
+				setTimeout(function() { var yidVal = Y.one('#yahooid').get('value'); getAccountSuggestion(yidVal); } , 200);
+			}
+		} else {
+			toggleYidError('show',localizedStrings.idempty);
+		}
+	} , '#yahooid');
+
+	Y.on('focus', function(e){
+		toggleYidError('hide');
+		var yidVal = Y.one('#yahooid').get('value');
+		if (yidVal !== '') {
+			if(suggestedList[yidVal] === 'AVAILABLE') {
+			}
+			else if(typeof suggestedList[yidVal] !== 'undefined') {
+				var s_box = Y.one('#suggestions'), 
+				    domainVal = '@' + Y.one('input[name=domain]').get('value'),
+				    list_html = '', i, sid;
+				for(i in suggestedList[yidVal]) {
+					sid = suggestedList[yidVal][i];
+					sid = sid.replace( domainVal, '');
+                    if (sid.indexOf('@') == -1) {
+                        list_html += '<li role="menuitem">' + sid + '</li>';
+                    }
+				}
+                if (list_html.length > 0) {
+                    setTimeout(function() {
+                        s_box.set('innerHTML' , list_html);
+                        s_box.removeClass('hide');
+                    }, 200);
+                }
+			}
+		}
+	}, '#yahooid');
+
+    Y.on('keyup', function(e) {
+        if (e.keyCode !== 38 && e.keyCode !== 40 && e.keyCode !== 13) {
+            var s_box = Y.one('#suggestions');
+            s_box.addClass('hide');
+            sel = -1;
+        }
+    }, '#yahooid');
+    Y.on('keyup', function(e) {
+        if (e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 13) {
+            var s_box = Y.one('#suggestions');
+            if (s_box.hasClass('hide')) return;
+
+            var nodes = s_box.all('li');
+            var tot = nodes.size();
+            if (!tot) return;
+            if (sel >= 0 && sel < tot) {
+                if (e.keyCode == 13) {
+                    var picked_id = nodes.item(sel).get('innerHTML');
+                    Y.one('#yahooid').set('value', picked_id);
+                    s_box.addClass('hide');
+                    Y.one('#password').focus();
+                    sel = -1;
+                    return;
+                }
+                nodes.item(sel).removeClass('focus');
+            }
+
+            if (e.keyCode == 40) {
+                sel += 1;
+                if (sel >= tot ) { sel = 0; }
+            } else {
+                sel -= 1;
+                if (sel < 0) { sel = tot -1; }
+            }
+            nodes.item(sel).addClass('focus');
+        }
+    }, '#yahooid,#suggestions');
+
+    Y.one('#suggestions').delegate('mouseover', function(e){
+        var s_box = Y.one('#suggestions'),
+            nodes = s_box.all('li');
+        if (nodes.size()) {
+            if(sel>-1) {
+                nodes.item(sel).removeClass('focus');
+            }
+            sel = nodes.indexOf(e.target);
+            nodes.item(sel).addClass('focus');
+        }
+    }, 'li');
+	Y.one('#suggestions').delegate('click', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+
+		var picked_id = e.currentTarget.get('innerHTML');
+		Y.one('#yahooid').set('value', picked_id);
+		e.container.addClass('hide');
+        sel = -1;
+		Y.one('#password').focus();
+	}, 'li');
+});
+
+YAHOO.i13n.YWA_ACTION_MAP = { "create": 48, "continue": 49, "closepopup": 50 };
+YAHOO.i13n.YWA_CF_MAP = { "action":17 };
+var rapid = new YAHOO.i13n.Rapid({
+        spaceid: "150002252",
+        ywa: {
+                project_id: "10001954694556",
+                document_name: "Desktop 3PA - Upgrade Form",
+                document_group: "Desktop - 3PA",
+                cf:{'8' : 'google', '11' : 'yahoo', '13' : '0'},
+
+                host: "o.analytics.yahoo.com"
+        },
+        lt_attr: "href",
+        keys: {A_pn: "MBR3PAMigration"}
+});
+}, 200);
+</script>
+
+
+<!-- spaceId: 150002250 --><script language="javascript">
+(function(){window.xzq_p=function(R){M=R};window.xzq_svr=function(R){J=R};function F(S){var T=document;if(T.xzq_i==null){T.xzq_i=new Array();T.xzq_i.c=0}var R=T.xzq_i;R[++R.c]=new Image();R[R.c].src=S}window.xzq_sr=function(){var S=window;var Y=S.xzq_d;if(Y==null){return }if(J==null){return }var T=J+M;if(T.length>P){C();return }var X="";var U=0;var W=Math.random();var V=(Y.hasOwnProperty!=null);var R;for(R in Y){if(typeof Y[R]=="string"){if(V&&!Y.hasOwnProperty(R)){continue}if(T.length+X.length+Y[R].length<=P){X+=Y[R]}else{if(T.length+Y[R].length>P){}else{U++;N(T,X,U,W);X=Y[R]}}}}if(U){U++}N(T,X,U,W);C()};function N(R,U,S,T){if(U.length>0){R+="&al="}F(R+U+"&s="+S+"&r="+T)}function C(){window.xzq_d=null;M=null;J=null}function K(R){xzq_sr()}function B(R){xzq_sr()}function L(U,V,W){if(W){var R=W.toString();var T=U;var Y=R.match(new RegExp("\\\\(([^\\\\)]*)\\\\)"));Y=(Y[1].length>0?Y[1]:"e");T=T.replace(new RegExp("\\\\([^\\\\)]*\\\\)","g"),"("+Y+")");if(R.indexOf(T)<0){var X=R.indexOf("{");if(X>0){R=R.substring(X,R.length)}else{return W}R=R.replace(new RegExp("([^a-zA-Z0-9$_])this([^a-zA-Z0-9$_])","g"),"$1xzq_this$2");var Z=T+";var rv = f( "+Y+",this);";var S="{var a0 = '"+Y+"';var ofb = '"+escape(R)+"' ;var f = new Function( a0, 'xzq_this', unescape(ofb));"+Z+"return rv;}";return new Function(Y,S)}else{return W}}return V}window.xzq_eh=function(){if(E||I){this.onload=L("xzq_onload(e)",K,this.onload,0);if(E&&typeof (this.onbeforeunload)!=O){this.onbeforeunload=L("xzq_dobeforeunload(e)",B,this.onbeforeunload,0)}}};window.xzq_s=function(){setTimeout("xzq_sr()",1)};var J=null;var M=null;var Q=navigator.appName;var H=navigator.appVersion;var G=navigator.userAgent;var A=parseInt(H);var D=Q.indexOf("Microsoft");var E=D!=-1&&A>=4;var I=(Q.indexOf("Netscape")!=-1||Q.indexOf("Opera")!=-1)&&A>=4;var O="undefined";var P=2000})();
+</script><script language="javascript">
+if(window.xzq_svr)xzq_svr('https://csc.beap.bc.yahoo.com/');
+if(window.xzq_p)xzq_p('yi?bv=1.0.0&bs=(135dso7om(gid$mEP06DIwNi6JaXQ9Ux.4jgFrNzAuM1MfuJL_obVo,st$1394587794640635,si$4465551,sp$150002250,pv$1,v$2.0))&t=J_3-D_3');
+if(window.xzq_s)xzq_s();
+</script><noscript>&lt;img width=1 height=1 alt="" src="https://csc.beap.bc.yahoo.com/yi?bv=1.0.0&amp;bs=(135dso7om(gid$mEP06DIwNi6JaXQ9Ux.4jgFrNzAuM1MfuJL_obVo,st$1394587794640635,si$4465551,sp$150002250,pv$1,v$2.0))&amp;t=J_3-D_3"&gt;</noscript><script>(function(c){var e="https://",a=c&&c.JSON,f="ypcdb",g=document,d=["yahoo.com","flickr.com","rivals.com","yahoo.net","yimg.com"],b;function i(l,o,n,m){var k,p;try{k=new Date();k.setTime(k.getTime()+m*1000);g.cookie=[l,"=",encodeURIComponent(o),"; domain=",n,"; path=/; max-age=",m,"; expires=",k.toUTCString()].join("")}catch(p){}}function h(l){var k,m;try{k=new Image();k.onerror=k.onload=function(){k.onerror=k.onload=null;k=null};k.src=l}catch(m){}}function j(u,A,n,y){var w=0,v,z,x,s,t,p,m,r,l,o,k,q;try{b=location}catch(r){b=null}try{if(a){k=a.parse(y)}else{q=new Function("return "+y);k=q()}}catch(r){k=null}try{v=b.hostname;z=b.protocol;if(z){z+="//"}}catch(r){v=z=""}if(!v){try{x=g.URL||b.href||"";s=x.match(/^((http[s]?)\:[\/]+)?([^:\/\s]+|[\:\dabcdef\.]+)/i);if(s&&s[1]&&s[3]){z=s[1]||"";v=s[3]||""}}catch(r){z=v=""}}if(!v||!k||!z||!A){return}while(l=d[w++]){t=l.replace(/\./g,"\\.");p=new RegExp("(\\.)+"+t+"$");if(v==l||v.search(p)!=-1){o=l;break}}if(!o){return}if(z===e){A=n}w=0;while(m=A[w++]){h(z+m+k[m.substr(1+m.lastIndexOf("="))])}i(f,u,o,86400)}j('41a59732b9fad8f4b0f5ee8c8ffc20db',['ad.yieldmanager.com/csync?ver=2.1','u2sb.interclick.com/beacon.gif?ver=2.1'],['ad.yieldmanager.com/csync?ver=2.1','cdnk.interclick.com/beacon.gif?ver=2.1'],'{"2.1":"&id=23351&value=8vdox7y9uir4r%26o%3d4%26q%3d7MKDBZAcLRWtOhL.mc.quN--%26f%3d7t%26v%3dztuOQio2QOEj61FNMp_P&optout=&timeout=1394587794&sig=13an6cv9k"}')})(window);
+</script>
+</div><script type="text/javascript" src="https://s.yimg.com/lq/combo?membership/build/util/yahoo/205615.js&amp;membership/build/util/leandom/211478.js&amp;membership/build/util/leanevent/205615.js&amp;membership/build/util/base/202927.js&amp;membership/build/validation/base/204516.js&amp;membership/build/validation/password/226163.js&amp;membership/build/validation/pwdmeter/204709.js&amp;membership/build/app/openidapp/225780.js"></script></body></html>

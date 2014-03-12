@@ -118,12 +118,12 @@
         }]
     });
 
-    $("#pie-chart").highcharts({
+    $("#total-chart").highcharts({
     	title: {
-    		text: "Percentage of Goalie Wins"
+    		text: "Total Goalie Wins"
     	},
     	series: [{
-    			type: 'pie',
+    			type: 'column',
     			data: <%= raw win_totals.to_json %>,
     			name: "Goalie Wins"
     	}]
@@ -131,5 +131,5 @@
 });
 </script>
 <div id="wpw-chart"></div>
+<div id="total-chart"></div>
 <div id="tw-chart"></div>
-<div id="pie-chart"></div>

@@ -3,7 +3,12 @@ require 'pry'
 namespace :import do 
 	task :week => :environment do
 		CSV.foreach("lib/scrapers/results.csv", headers: true) do |row|
-			Week.create! row.to_hash
+			row = row.to_hash
+			find_hash = {:week_number => row[:week_number], :team => row[:team_number]}
+			week = Week.find_or_initialize_by(find_hash)
+			week.update(row)
+			week.save
+			puts week.persisted?
 		end
 	end
 
