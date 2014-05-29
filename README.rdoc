@@ -11,3 +11,5 @@ Much code refactoring needs to be done as the site was created as quickly as pos
 For example unholy inline JS should be refactored to coffeescript and moved to their respective files.
 
 Scrapers can be found in lib/scrapers
+
+This was my first attempt at my own Rails app. It works fine, however the code is very ugly.
